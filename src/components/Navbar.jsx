@@ -44,21 +44,6 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="absolute inset-0 bg-purple-950/40 backdrop-blur-md border-b border-amber-700/20 shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
           ></motion.div>
-          {/* golden glow */}
-          <div
-            className="
-    absolute
-    top-0
-    left-1/2
-    -translate-x-1/2
-    w-[500px]
-    h-[400px]
-    bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.4),rgba(255,170,0,0.2),transparent_55%)]
-    blur-3xl
-    pointer-events-none
-    z-0
-  "
-          />
 
           <div className="relative mx-auto max-w-7xl px-4 py-7 sm:px-6">
             {/* Mobile Layout */}
@@ -149,7 +134,7 @@ export default function Navbar() {
                       className="group cursor-pointer text-center"
                     >
                       <motion.h1
-                        className="text-3xl font-bold tracking-wider text-amber-500"
+                        className="text-3xl font-bold tracking-wider text-amber-500 mt-2"
                         transition={{ duration: 0.3 }}
                         style={{ fontFamily: "var(--font-ethno)" }}
                       >
@@ -199,6 +184,25 @@ export default function Navbar() {
               className="absolute inset-0 bg-purple-950/90"
             />
 
+            {/* Close Button - Top Right */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8, rotate: -90 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              exit={{ opacity: 0, scale: 0.8, rotate: 90 }}
+              transition={{ duration: 0.3 }}
+              whileHover={{
+                scale: 1.1,
+                rotate: 90,
+                boxShadow: "0 0 20px rgba(245, 158, 11, 0.5)",
+              }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 z-60 rounded-full bg-amber-500/20 p-3 text-amber-500 backdrop-blur-sm border border-amber-500/30 hover:bg-amber-500/30 transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-7 w-7" />
+            </motion.button>
+
             <div className="relative flex h-full items-center justify-center pt-20">
               <motion.div
                 initial="closed"
@@ -224,6 +228,8 @@ export default function Navbar() {
                     }}
                   />
                 ))}
+
+               
               </motion.div>
             </div>
           </motion.div>
