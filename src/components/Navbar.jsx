@@ -35,15 +35,30 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 right-0 left-0 z-60"
+        className="fixed top-0 right-0 left-0 z-50"
       >
         <div className="relative">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="absolute inset-0 border-b border-amber-700/30 bg-purple-950/40 backdrop-blur-md"
+            className="absolute inset-0 bg-purple-950/40 backdrop-blur-md border-b border-amber-700/20 shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
           ></motion.div>
+          {/* golden glow */}
+          <div
+            className="
+    absolute
+    top-0
+    left-1/2
+    -translate-x-1/2
+    w-[500px]
+    h-[400px]
+    bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.4),rgba(255,170,0,0.2),transparent_55%)]
+    blur-3xl
+    pointer-events-none
+    z-0
+  "
+          />
 
           <div className="relative mx-auto max-w-7xl px-4 py-7 sm:px-6">
             {/* Mobile Layout */}

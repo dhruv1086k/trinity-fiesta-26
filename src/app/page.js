@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-[url('/assets/bg.png')] bg-center bg-cover relative">
-
+    <div className="relative z-10 w-full h-screen bg-[url('/assets/bg.png')] bg-center bg-cover">
       {/* Mandala Border Design */}
       <img
         src="/assets/mandala.png"
@@ -27,7 +26,7 @@ export default function Home() {
       />
 
       {/* content */}
-      <div className="w-full h-screen flex items-center justify-center flex-col">
+      <div className="w-full h-screen flex items-center justify-center flex-col z-10">
         <h1 className="text-[clamp(2.5rem,8vw,10rem)]">
           Trinity Fiesta
         </h1>
