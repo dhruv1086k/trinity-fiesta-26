@@ -1,10 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 
 export default function Home() {
+
+  const [mounted, setMounted] = useState(false);
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    setMounted(true);
+
+    const updateSize = () => {
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
-    <div className="w-full h-screen bg-[url('/assets/bg.png')] bg-center bg-cover relative overflow-hidden">
+    <div className="w-full h-screen bg-[url('/assets/bookeh5.png')] bg-center bg-cover relative overflow-hidden">
       {/* Animated Particles/Sparkles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Small floating dots */}
@@ -13,12 +36,12 @@ export default function Home() {
             key={i}
             className="absolute w-1 h-1 bg-amber-400/60 rounded-full"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * size.width,
+              y: Math.random() * size.height,
               opacity: 0,
             }}
             animate={{
-              y: [null, Math.random() * window.innerHeight],
+              y: Math.random() * size.height,
               opacity: [0, 1, 0],
             }}
             transition={{
@@ -35,12 +58,12 @@ export default function Home() {
             key={`orb-${i}`}
             className="absolute w-20 h-20 bg-amber-500/10 rounded-full blur-xl"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * size.width,
+              y: Math.random() * size.height,
             }}
             animate={{
-              x: [null, Math.random() * window.innerWidth],
-              y: [null, Math.random() * window.innerHeight],
+              x: Math.random() * size.width,
+              y: Math.random() * size.height,
               scale: [1, 1.5, 1],
             }}
             transition={{
@@ -56,7 +79,35 @@ export default function Home() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Top Right Firework */}
         <motion.div
-          className="absolute top-32 right-1/4 w-16 h-16"
+          className="absolute top-1/3 right-10 w-16 h-16"
+          animate={{
+            scale: [0, 1.5, 0],
+            opacity: [0, 1, 0],
+            rotate: [0, 180],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatDelay: 2,
+          }}
+        >
+          <div className="relative w-full h-full">
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute top-1/2 left-1/2 w-px h-6 bg-gradient-to-t from-amber-400 to-transparent"
+                style={{
+                  transform: `rotate(${i * 30}deg) translateY(-8px)`,
+                  transformOrigin: "center",
+                }}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Bottom Left Firework */}
+        <motion.div
+          className="absolute bottom-32 left-10 w-16 h-16"
           animate={{
             scale: [0, 1.5, 0],
             opacity: [0, 1, 0],
@@ -112,40 +163,6 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Mandala Border Design */}
-      <motion.img
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.8, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        src="/assets/mandala.png"
-        alt="Mandala Border"
-        className="absolute top-0 left-0 w-40 md:w-48 opacity-80"
-      />
-      <motion.img
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.8, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        src="/assets/mandala.png"
-        alt="Mandala Border"
-        className="absolute top-0 right-0 w-40 md:w-48 opacity-80 rotate-90"
-      />
-      <motion.img
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.8, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        src="/assets/mandala.png"
-        alt="Mandala Border"
-        className="absolute bottom-0 left-0 w-40 md:w-48 opacity-80 -rotate-90"
-      />
-      <motion.img
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.8, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        src="/assets/mandala.png"
-        alt="Mandala Border"
-        className="absolute bottom-0 right-0 w-40 md:w-48 opacity-80 rotate-180"
-      />
-
       {/* Silhouette Crowd at Bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
@@ -156,8 +173,58 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative bg-purple-900/20 backdrop-blur-md border border-amber-500/20 rounded-3xl px-8 md:px-16 py-12 shadow-2xl"
+          className="relative bg-[url('/assets/bg.png')] bg-center bg-cover rounded-3xl px-8 md:px-48 py-20 md:py-26 shadow-2xl mt-10 md:mt-0"
         >
+
+          {/* black center glow */}
+          <div
+            className="
+    absolute
+    top-1/2
+    left-1/2
+    -translate-1/2
+    w-[1000px]
+    h-[1000px]
+    bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_90%)]
+    blur-3xl
+    pointer-events-none
+    z-0
+  "
+          />
+
+          {/* Mandala Border Design */}
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.8, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            src="/assets/mandala.png"
+            alt="Mandala Border"
+            className="absolute top-0 left-0 w-24 md:w-48 opacity-80"
+          />
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.8, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            src="/assets/mandala.png"
+            alt="Mandala Border"
+            className="absolute top-0 right-0 w-24 md:w-48 opacity-80 rotate-90"
+          />
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.8, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            src="/assets/mandala.png"
+            alt="Mandala Border"
+            className="absolute bottom-0 left-0 w-24 md:w-48 opacity-80 -rotate-90"
+          />
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.8, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            src="/assets/mandala.png"
+            alt="Mandala Border"
+            className="absolute bottom-0 right-0 w-24 md:w-48 opacity-80 rotate-180"
+          />
           {/* Subtle glow effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-purple-500/5 rounded-3xl" />
 
@@ -166,7 +233,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-[clamp(2.5rem,8vw,7rem)] font-bold text-amber-500 leading-tight"
+              className="text-[clamp(2.5rem,5vw,7rem)] font-bold text-amber-500 leading-tight"
               style={{
                 textShadow: "0 0 30px rgba(245, 158, 11, 0.3)",
                 fontFamily: "var(--font-ethno)", // Use your custom font
@@ -205,7 +272,7 @@ export default function Home() {
                   boxShadow: "0 0 25px rgba(245, 158, 11, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all"
+                className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all"
               >
                 Register Now
               </motion.button>
@@ -213,7 +280,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent border-2 border-amber-500 text-amber-400 font-semibold px-10 py-4 rounded-full hover:bg-amber-500/10 transition-all"
+                className="bg-transparent border-2 border-amber-500 text-amber-400 font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full hover:bg-amber-500/10 transition-all"
               >
                 Explore Events
               </motion.button>
@@ -226,7 +293,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="absolute bottom-12 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
+          className="absolute bottom-4 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
         >
           <div className="text-center cursor-pointer group">
             <motion.div

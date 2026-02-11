@@ -228,8 +228,6 @@ export default function Navbar() {
                     }}
                   />
                 ))}
-
-               
               </motion.div>
             </div>
           </motion.div>
