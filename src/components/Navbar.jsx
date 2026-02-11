@@ -45,7 +45,7 @@ export default function Navbar() {
             className="absolute inset-0 bg-purple-950/40 backdrop-blur-md border-b border-amber-700/20 shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
           ></motion.div>
 
-          <div className="relative mx-auto max-w-7xl px-4 py-7 sm:px-6">
+          <div className="relative mx-auto max-w-7xl px-4 py-5 sm:px-4">
             {/* Mobile Layout */}
             <div className="flex items-center justify-between lg:hidden">
               <Link href="/">
