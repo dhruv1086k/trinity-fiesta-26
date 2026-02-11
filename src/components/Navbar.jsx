@@ -149,7 +149,7 @@ export default function Navbar() {
                       className="group cursor-pointer text-center"
                     >
                       <motion.h1
-                        className="text-3xl font-bold tracking-wider text-amber-500 mt-2"
+                        className="text-3xl font-bold tracking-wider text-amber-500"
                         transition={{ duration: 0.3 }}
                         style={{ fontFamily: "var(--font-ethno)" }}
                       >
