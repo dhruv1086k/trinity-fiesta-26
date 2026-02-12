@@ -161,7 +161,6 @@ const EventsPage = () => {
   const days = [
     { id: 1, label: "DAY 1" },
     { id: 2, label: "DAY 2" },
-    { id: 3, label: "DAY 3" },
   ];
 
   const events = eventsData[activeDay] || [];
@@ -209,7 +208,6 @@ const EventsPage = () => {
               color: "transparent",
               fontFamily: "var(--font-ethno)",
             }}
-
           >
             EVENTS
           </motion.h1>
@@ -225,6 +223,7 @@ const EventsPage = () => {
                 className="relative flex flex-col items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                style={{ fontFamily: "var(--font-josefin)" }}
               >
                 <motion.span
                   className={`text-base font-bold tracking-widest uppercase transition-all duration-300 lg:text-xl ${
@@ -244,7 +243,7 @@ const EventsPage = () => {
                 {activeDay === day.id && (
                   <motion.div
                     layoutId="activeDay"
-                    className="absolute -bottom-3 h-1 w-16 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.6)]"
+                    className="absolute -bottom-3 h-1 w-16 rounded-full bg-linear-to-r from-amber-400 via-amber-500 to-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.6)]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -359,6 +358,7 @@ const EventCard = ({ event, index, side, inView }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: index * 0.05 }}
+      style={{ fontFamily: "var(--font-josefin)" }}
     >
       {/* MOBILE LAYOUT (< 1024px) */}
       <div className="flex items-start gap-4 pl-16 lg:hidden">

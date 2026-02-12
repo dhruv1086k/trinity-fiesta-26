@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { Josefin_Sans } from "next/font/google";
+import { Josefin_Sans, Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -15,6 +15,12 @@ const josefin = Josefin_Sans({
   variable: "--font-josefin",
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
 export const metadata = {
   title: "Trinity Fiesta",
   description:
@@ -24,7 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${josefin.variable} ${ethno.variable} antialiased`}>
+      <body
+        className={`${josefin.variable} ${ethno.variable} ${poppins.variable} antialiased`}
+      >
         <Navbar />
         {children}
         <Footer />
