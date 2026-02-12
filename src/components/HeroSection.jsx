@@ -297,59 +297,43 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="absolute bottom-4 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
+          className="absolute bottom-0 sm:bottom-4 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
         >
-          <div className="text-center cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-12 h-12 mx-auto mb-2 flex items-center justify-center"
-            >
-              <svg
-                className="w-8 h-8 text-amber-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+          <a href="/events">
+            <div className="text-center cursor-pointer group">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
               >
-                <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" />
-              </svg>
-            </motion.div>
-            <p className="text-amber-400 text-sm">About the Fest</p>
-          </div>
+                <img src="/assets/eventIcon.png" alt="" />
+              </motion.div>
+              <p className="text-amber-400 text-xs md:text-sm">Events</p>
+            </div>
+          </a>
 
-          <div className="text-center cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-12 h-12 mx-auto mb-2 flex items-center justify-center"
-            >
-              <svg
-                className="w-8 h-8 text-amber-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+          <a href="/venue">
+            <div className="text-center cursor-pointer group">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
               >
-                <path d="M10 2a.75.75 0 01.657.407l3.5 7a.75.75 0 01-.657 1.093H6.5a.75.75 0 01-.657-1.093l3.5-7A.75.75 0 0110 2z" />
-              </svg>
-            </motion.div>
-            <p className="text-amber-400 text-sm">Star Night Highlight</p>
-          </div>
+                <img src="/assets/venueIcon.png" alt="" />
+              </motion.div>
+              <p className="text-amber-400 text-xs md:text-sm">Venue</p>
+            </div>
+          </a>
 
-          <div className="text-center cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-12 h-12 mx-auto mb-2 flex items-center justify-center"
-            >
-              <svg
-                className="w-8 h-8 text-amber-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+          <a href="/schedule">
+            <div className="text-center cursor-pointer group">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </motion.div>
-            <p className="text-amber-400 text-sm">Schedule</p>
-          </div>
+                <img src="/assets/scheduleIcon.png" alt="" />
+              </motion.div>
+              <p className="text-amber-400 text-xs md:text-sm">Schedule</p>
+            </div>
+          </a>
         </motion.div>
       </div>
     </div>
