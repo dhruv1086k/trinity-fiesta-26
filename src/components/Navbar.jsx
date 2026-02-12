@@ -45,7 +45,7 @@ export default function Navbar() {
             className="absolute inset-0 bg-purple-950/40 backdrop-blur-md border-b border-amber-700/20 shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
           ></motion.div>
 
-          <div className="relative mx-auto max-w-7xl px-4 py-5 sm:px-4">
+          <div className="relative mx-auto max-w-7xl px-4 py-5 md:py-3 sm:px-4">
             {/* Mobile Layout */}
             <div className="flex items-center justify-between lg:hidden">
               <Link href="/">
@@ -134,11 +134,15 @@ export default function Navbar() {
                       className="group cursor-pointer text-center"
                     >
                       <motion.h1
-                        className="text-3xl font-bold tracking-wider text-amber-500 mt-2"
+                        className="text-3xl font-bold tracking-wider text-amber-500"
                         transition={{ duration: 0.3 }}
                         style={{ fontFamily: "var(--font-ethno)" }}
                       >
-                        TRINITY FIESTA
+                        <img
+                          src="/assets/trinityFiestaLogo.png"
+                          alt=""
+                          className="w-30"
+                        />
                       </motion.h1>
                     </motion.div>
                   </Link>
@@ -249,7 +253,7 @@ function NavLink({ item, isActive }) {
           color: isActive ? "#F59E0B" : isHovered ? "#F59E0B" : "#D4AF37",
         }}
         transition={{ duration: 0.3 }}
-        className="inline-block text-sm font-medium tracking-wider"
+        className="inline-block text-md font-medium tracking-wider"
       >
         {item.label}
       </motion.span>
@@ -260,7 +264,7 @@ function NavLink({ item, isActive }) {
           width: isActive || isHovered ? "100%" : "0%",
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600"
+        className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 rounded-full"
       />
     </a>
   );

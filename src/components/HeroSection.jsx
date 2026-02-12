@@ -33,7 +33,10 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="w-full h-screen relative overflow-hidden">
+    <div
+      className="w-full h-screen relative overflow-hidden"
+      style={{ fontFamily: "var(--font-poppins)" }}
+    >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50 -z-10"></div>
 
@@ -243,7 +246,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-2xl md:text-3xl my-6 text-amber-100 font-light"
+              className="text-2xl md:text-3xl my-6 text-amber-100 font-medium"
             >
               Annual Fest of Trinity Dwarka
             </motion.h4>
@@ -252,7 +255,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="text-xl md:text-2xl text-amber-200/90"
+              className="text-xl md:text-2xl font-medium text-amber-200/90"
             >
               Insanely Crafted For You
             </motion.h5>
@@ -263,24 +266,28 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 1.1 }}
               className="flex flex-col sm:flex-row gap-6 mt-12 justify-center"
             >
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 25px rgba(245, 158, 11, 0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all"
-              >
-                Register Now
-              </motion.button>
+              <a href="https://linktr.ee/trinityfiesta" target="_blank">
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 0 25px rgba(245, 158, 11, 0.5)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all cursor-pointer"
+                >
+                  Register Now
+                </motion.button>
+              </a>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-transparent border-2 border-amber-500 text-amber-400 font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full hover:bg-amber-500/10 transition-all"
-              >
-                Explore Events
-              </motion.button>
+              <a href="/events">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-transparent border-2 border-amber-500 text-amber-400 font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full hover:bg-amber-500/10 transition-all cursor-pointer"
+                >
+                  Explore Events
+                </motion.button>
+              </a>
             </motion.div>
           </div>
         </motion.div>
