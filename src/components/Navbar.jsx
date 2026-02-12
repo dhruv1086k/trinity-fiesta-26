@@ -245,7 +245,7 @@ function NavLink({ item, isActive }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <a href={item.href} className="relative block">
+    <Link href={item.href} className="relative block">
       <motion.span
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -266,7 +266,7 @@ function NavLink({ item, isActive }) {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 rounded-full"
       />
-    </a>
+    </Link>
   );
 }
 
@@ -292,7 +292,7 @@ function MobileNavLink({ item, isActive, onClick }) {
 
   return (
     <motion.div variants={variants} className="text-center">
-      <a href={item.href} onClick={onClick} className="relative inline-block">
+      <Link href={item.href} onClick={onClick} className="relative inline-block">
         <motion.div
           whileTap={{ scale: 0.95 }}
           onHoverStart={() => setIsHovered(true)}
@@ -318,7 +318,7 @@ function MobileNavLink({ item, isActive, onClick }) {
           transition={{ duration: 0.3 }}
           className="mx-auto h-0.75 w-3/4 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600"
         />
-      </a>
+      </Link>
     </motion.div>
   );
 }

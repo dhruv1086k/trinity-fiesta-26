@@ -1,6 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Josefin_Sans, Poppins } from "next/font/google";
+import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin.variable} ${ethno.variable} ${witch.variable} ${poppins.variable} antialiased`}
       >
+        <LoadingScreen />
         <Navbar />
         {children}
         <Footer />

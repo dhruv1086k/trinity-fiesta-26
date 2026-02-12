@@ -214,7 +214,7 @@ const EventsPage = () => {
         </motion.div>
 
         {/* Day Selector */}
-        <div className="sticky top-20 z-20 mb-8 bg-linear-to-r from-purple-950/80 via-purple-900/80 to-purple-950/80 py-8 backdrop-blur-xl border-y border-amber-500/20">
+        <div className="sticky top-18 z-20 mb-8 bg-linear-to-r from-purple-950/80 via-purple-900/80 to-purple-950/80 py-8 backdrop-blur-xl border-y border-amber-500/20">
           <div className="mx-auto flex max-w-4xl items-center justify-center gap-8 lg:gap-16">
             {days.map((day) => (
               <motion.button
