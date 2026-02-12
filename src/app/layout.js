@@ -9,6 +9,11 @@ const ethno = localFont({
   variable: "--font-ethno",
 });
 
+const witch = localFont({
+  src: "../../public/assets/font/Ritual-of-the-Witch.ttf",
+  variable: "--font-witch",
+});
+
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -31,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${josefin.variable} ${ethno.variable} ${poppins.variable} antialiased`}
+        className={`${josefin.variable} ${ethno.variable} ${witch.variable} ${poppins.variable} antialiased`}
       >
         <Navbar />
         {children}
