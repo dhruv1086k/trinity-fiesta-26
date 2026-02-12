@@ -206,7 +206,8 @@ export default function Home() {
     -translate-1/2
     w-[1000px]
     h-[1000px]
-    bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_90%)]
+    bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_30%)]
+    md:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_90%)]
     blur-3xl
     pointer-events-none
     z-0
