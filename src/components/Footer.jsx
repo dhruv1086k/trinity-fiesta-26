@@ -79,7 +79,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black px-6 pt-20 pb-10 text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-black px-6 pt-20 pb-10 text-white"
+    style={{fontFamily: "var(--font-poppins)"}}>
       {/* linear Background Effect */}
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-amber-500/5 via-amber-600/5 to-transparent" />
 
@@ -105,24 +106,21 @@ const Footer = () => {
           className="flex flex-col items-start"
         >
           <motion.div
-            whileHover={{ scale: 1.05 }}
             className="mb-6 flex items-center gap-3"
           >
-            <div className="relative h-10 w-10">
+            <div className="relative h-20 w-50">
               <Image
-                src="/assets/logoAlfa.jpeg"
+                src="/assets/trinityFiestaLogo.png"
                 fill
                 alt="TRINITY FIESTA Logo"
                 className="rounded-lg object-cover"
               />
             </div>
-            <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-[20px] font-bold tracking-tighter text-transparent uppercase">
-              TRINITY FIESTA
-            </span>
+            
           </motion.div>
           <motion.p
             variants={itemVariants}
-            className="mb-6 text-left text-sm leading-relaxed text-gray-300"
+            className=" text-left text-sm leading-relaxed text-gray-300"
           >
             {` TRINITY FIESTA 2026 – Trinity Dwarka's premier tech fest, showcasing
             innovation, competitions, and creativity in the digital era!`}
@@ -169,7 +167,7 @@ const Footer = () => {
               <Calendar className="h-6 w-6 text-amber-400 transition-colors group-hover:text-amber-500" />
               <div>
                 <p className="text-sm font-bold tracking-wider text-white uppercase">
-                  February 25-27 2026
+                  February 26-27 2026
                 </p>
                 <p className="mt-1 text-xs text-gray-400">
                   Trinity Dwarka Main Campus
@@ -254,7 +252,6 @@ const Footer = () => {
           href="https://share.google/1BjhhYbBWPe1q0PSr"
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
           className="group flex cursor-pointer items-center gap-4"
         >
           <div className="text-right">
@@ -266,8 +263,6 @@ const Footer = () => {
             </p>
           </div>
           <motion.div
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6 }}
             className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-amber-400/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]"
           >
             <Image
