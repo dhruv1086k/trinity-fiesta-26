@@ -7,12 +7,15 @@ import "swiper/css";
 
 export default function GlimpsesSpiral() {
   const images = [
-    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1974&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2012&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1964&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=1974&auto=format&fit=crop",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912024/484334074_17962590008884978_7307808913900075864_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_105_ig_cache_key_MzU4NzM2NTE4NTIyMjM1NTA1MA.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4OTYwLnNkci5DMy_gzjdk2.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912025/485266106_17963070599884978_2344543302413975678_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_109_ig_cache_key_MzU5MDMwMTA0NjczMzk1NDExNQ.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4OTYwLnNkci5DMy_tijcnz.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912024/481037849_18447462175076169_6204287915062577621_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_110_ig_cache_key_MzU3NDg0ODg3Mzg2MTg5NjgwMA.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4OTU5LnNkci5DMy_xo6yx0.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912024/503835617_691338780171552_5866054379798995305_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_109_ig_cache_key_MzU4NTgzOTMyMzgzMzA2NzE5Nw.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4NjA3LnNkci5DMyJ9_kf4bhn.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912024/481763354_18447632092076169_1894754001892604569_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_109_ig_cache_key_MzU3NTYzNDk4MDgxMTczMDAwMg.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4ODk0LnNkci_1_ezbv7l.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912022/482991832_17961751136884978_72446284074576214_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_110_ig_cache_key_MzU4MjMzMTM0MDcwMTg2MTY1MQ.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyODB4MTI4MC5zZHIu_1_yxtzph.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912023/481374946_18354975835177027_2535649949340016025_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_101_ig_cache_key_MzU3NTE2NDE5OTMzMDU4MzA2Ng.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjU0MHg5NjAuc2RyLkMzIn_w7hwa3.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912022/481754612_18050762732332829_6839191128153065189_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_108_ig_cache_key_MzU3NTE1MTYyNjA2NTU5ODEzNjE4MDUwNzYyNzI2MzMyODI5.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLj_qgxjii.jpg",
+    "https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912021/482422648_1298080774787144_2187220211087111415_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_109_ig_cache_key_MzU4MDgyNTM1MjAzNDY4MjcyMg.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ_fhn3xh.jpg",
   ];
 
   // Background color
@@ -22,6 +25,9 @@ export default function GlimpsesSpiral() {
     <div
       className={`relative w-full min-h-screen overflow-hidden flex flex-col items-center justify-center ${bgColor}`}
     >
+      {/* Strong Top Black Shadow */}
+      <div className="absolute top-0 left-0 right-0 h-[40vh] bg-gradient-to-b from-black via-black/10 to-transparent pointer-events-none z-20" />
+
       {/* Title Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -38,7 +44,10 @@ export default function GlimpsesSpiral() {
         >
           GLIMPSES
         </h2>
-        <p className="text-amber-200 text-base md:text-xl mt-2" style={{ fontFamily: "var(--font-poppins)" }}>
+        <p
+          className="text-amber-200 text-base md:text-xl mt-2"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
           Relive the moments from Trinity Fiesta
         </p>
       </motion.div>
@@ -47,7 +56,7 @@ export default function GlimpsesSpiral() {
       <div className="relative w-full h-[55vh] md:h-[70vh] flex items-center justify-center">
         {/* Top Curve Overlay */}
         <div
-          className={`absolute top-[-480%] left-1/2 -translate-x-1/2 w-[500%] h-[500%] rounded-[50%] z-10 ${bgColor}`}
+          className={`absolute top-[-480%] left-1/2 -translate-x-1/2 w-[500%] h-[500%] rounded-[50%] z-10 bg-[url('/assets/bookeh5.png')]`}
         />
 
         {/* Swiper Slider */}
@@ -78,7 +87,7 @@ export default function GlimpsesSpiral() {
               spaceBetween: 40,
             },
           }}
-          className="w-full h-full max-w-7xl"
+          className="w-full h-full"
           style={{ perspective: "1000px" }}
         >
           {images.map((img, index) => (
@@ -101,11 +110,9 @@ export default function GlimpsesSpiral() {
 
         {/* Bottom Curve Overlay */}
         <div
-          className={`absolute bottom-[-480%] left-1/2 -translate-x-1/2 w-[500%] h-[500%] rounded-[50%] z-10 ${bgColor}`}
+          className={`absolute bottom-[-480%] left-1/2 -translate-x-1/2 w-[500%] h-[500%] rounded-[50%] z-10 bg-[url('/assets/bookeh5.png')]`}
         />
       </div>
-
-      
     </div>
   );
 }

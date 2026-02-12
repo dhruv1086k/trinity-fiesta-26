@@ -176,8 +176,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Silhouette Crowd at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+      {/* Strong Bottom Black Shadow */}
+      <div className="absolute bottom-0 left-0 right-0 h-72 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none z-10" />
 
       {/* Content */}
       <div className="w-full h-screen flex items-center justify-center flex-col relative z-10 px-4">
@@ -186,7 +186,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative bg-[url('/assets/bg.png')] bg-center bg-cover rounded-3xl px-8 md:px-48 py-20 md:py-26 shadow-2xl mt-10 md:mt-0"
+          className="relative bg-[url('/assets/bg.png')] bg-center bg-cover rounded-3xl px-8 md:px-48 py-20 md:py-26 shadow-2xl mt-4 md:mt-0"
         >
           {/* Black center glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_70%)] blur-3xl pointer-events-none z-0" />
@@ -283,7 +283,20 @@ export default function HeroSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-transparent border-2 border-amber-500 text-amber-400 font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full hover:bg-amber-500/10 transition-all cursor-pointer"
+                  className="
+      backdrop-blur-md
+      bg-white/10
+      border border-amber-300
+      text-amber-300
+      font-semibold
+      px-4 py-2 md:px-10 md:py-4
+      rounded-full
+      shadow-lg shadow-amber-500/10
+      hover:bg-white/20
+      hover:shadow-amber-400/30
+      transition-all duration-300
+      cursor-pointer
+    "
                 >
                   Explore Events
                 </motion.button>
