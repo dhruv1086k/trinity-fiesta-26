@@ -7,6 +7,27 @@ export default function Home() {
 
   const [mounted, setMounted] = useState(false);
   const [size, setSize] = useState({ width: 0, height: 0 });
+  const [particles, setParticles] = useState([]);
+  const [orbs, setOrbs] = useState([]);
+
+  useEffect(() => {
+    if (size.width === 0 || size.height === 0) return;
+    
+    setParticles([...Array(20)].map(() => ({
+      x: Math.random() * size.width,
+      y: Math.random() * size.height,
+      duration: Math.random() * 5 + 3,
+      delay: Math.random() * 2,
+    })));
+
+    setOrbs([...Array(8)].map(() => ({
+      x: Math.random() * size.width,
+      y: Math.random() * size.height,
+      targetX: Math.random() * size.width,
+      targetY: Math.random() * size.height,
+      duration: Math.random() * 10 + 8,
+    })));
+  }, [size.width, size.height]);
 
   useEffect(() => {
     setMounted(true);
@@ -31,43 +52,43 @@ export default function Home() {
       {/* Animated Particles/Sparkles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Small floating dots */}
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-amber-400/60 rounded-full"
             initial={{
-              x: Math.random() * size.width,
-              y: Math.random() * size.height,
+              x: particle.x,
+              y: particle.y,
               opacity: 0,
             }}
             animate={{
-              y: Math.random() * size.height,
+              y: [particle.y, size.height - particle.y, particle.y],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: Math.random() * 5 + 3,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
             }}
           />
         ))}
 
         {/* Larger glowing orbs */}
-        {[...Array(8)].map((_, i) => (
+        {orbs.map((orb, i) => (
           <motion.div
             key={`orb-${i}`}
             className="absolute w-20 h-20 bg-amber-500/10 rounded-full blur-xl"
             initial={{
-              x: Math.random() * size.width,
-              y: Math.random() * size.height,
+              x: orb.x,
+              y: orb.y,
             }}
             animate={{
-              x: Math.random() * size.width,
-              y: Math.random() * size.height,
+              x: orb.targetX,
+              y: orb.targetY,
               scale: [1, 1.5, 1],
             }}
             transition={{
-              duration: Math.random() * 10 + 8,
+              duration: orb.duration,
               repeat: Infinity,
               ease: "easeInOut",
             }}

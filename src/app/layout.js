@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Josefin_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const ethno = localFont({
   src: "../../public/assets/font/Ethnocentric-Regular.ttf",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${josefin.variable} ${ethno.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
