@@ -16,14 +16,14 @@ export default function AboutPage() {
 
   // Scroll to top on page load
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     window.scrollTo(0, 0);
   }, []);
 
   const stats = [
-    { icon: Calendar, label: "Days of Fun", value: "3" },
-    { icon: Users, label: "Expected Visitors", value: "5000+" },
-    { icon: Trophy, label: "Events", value: "50+" },
+    { icon: Calendar, label: "Days of Fun", value: "2" },
+    { icon: Trophy, label: "Events", value: "45+" },
     { icon: Music, label: "Performances", value: "20+" },
   ];
 
@@ -125,19 +125,6 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="px-4 py-32">
           <div className="mx-auto max-w-6xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 flex items-center justify-center gap-2"
-            >
-              <Sparkles className="h-6 w-6 text-cyan-400" />
-              <span className="text-sm font-bold tracking-widest text-cyan-400 uppercase">
-                About Trinity Fiesta
-              </span>
-              <Sparkles className="h-6 w-6 text-cyan-400" />
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -145,59 +132,64 @@ export default function AboutPage() {
               className="mb-6 text-5xl font-black tracking-wide uppercase md:text-7xl lg:text-8xl"
               style={{
                 background:
-                  "linear-gradient(90deg, #fff, #22d3ee, #a855f7, #fff)",
+                  "linear-gradient(90deg, #F59E0B, #FBBF24, #D97706, #F59E0B)",
                 backgroundSize: "200% 100%",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
+                fontFamily: "var(--font-ethno)",
               }}
             >
               The Ultimate
               <br />
-              Cultural Festival
+              Annual Festival
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mx-auto mb-12 max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl"
-            >
-              Trinity Fiesta is the annual cultural extravaganza that brings
-              together creativity, talent, and innovation. A celebration of art,
-              music, dance, and technology that transcends boundaries and
-              creates unforgettable memories.
-            </motion.p>
+            <div style={{ fontFamily: "var(--font-poppins)" }}>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mx-auto mb-12 max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl"
+              >
+                {` Trinity Fiesta is the annual cultural extravaganza that brings
+                together creativity, talent, and innovation. A celebration of
+                art, music, dance, and technology that transcends boundaries and
+                creates unforgettable memories.`}
+              </motion.p>
 
-            {/* Stats */}
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="grid grid-cols-2 gap-6 md:grid-cols-4"
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="rounded-2xl border border-cyan-400/30 bg-black/60 p-6 backdrop-blur-md"
-                >
-                  <stat.icon className="mx-auto mb-3 h-10 w-10 text-cyan-400" />
-                  <div className="mb-1 text-3xl font-black text-white md:text-4xl">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm font-semibold tracking-wide text-gray-400 uppercase">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+              {/* Stats */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="grid grid-cols-1 gap-6 md:grid-cols-3"
+              >
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="rounded-2xl border border-amber-400/30 bg-black/60 p-6 backdrop-blur-md shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+                  >
+                    <stat.icon className="mx-auto mb-3 h-10 w-10 text-amber-400" />
+                    <div className="mb-1 text-3xl font-black text-white md:text-4xl">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm font-semibold tracking-wide text-gray-400 uppercase">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </section>
 
         {/* What We Offer Section */}
-        <section className="px-4 py-20">
+        <section
+          className="px-4 py-20"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
           <div className="mx-auto max-w-7xl">
             <motion.div
               initial="hidden"
@@ -208,7 +200,7 @@ export default function AboutPage() {
             >
               <h2 className="mb-4 text-4xl font-black tracking-wide uppercase md:text-5xl">
                 What We{" "}
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                   Offer
                 </span>
               </h2>
@@ -229,15 +221,14 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  className="rounded-2xl border border-white/10 bg-black/60 p-8 backdrop-blur-md transition-all duration-300"
+                  className="rounded-2xl border border-white/10 bg-black/60 p-8 backdrop-blur-md transition-all duration-300 hover:border-amber-400/30 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]"
                 >
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="mb-6 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 p-4"
+                    className="mb-6 inline-flex items-center justify-center rounded-full bg-linear-to-br from-amber-400 to-amber-600 p-4 shadow-[0_0_20px_rgba(245,158,11,0.4)]"
                   >
                     <feature.icon className="h-8 w-8 text-white" />
                   </motion.div>
@@ -255,8 +246,11 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story Section */}
-        <section className="px-4 py-20">
-          <div className="mx-auto max-w-6xl">
+        <section
+          className="px-4 py-20"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
+          <div className="mx-auto max-w-6xl overflow-hidden">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               {/* Text Content */}
               <motion.div
@@ -267,7 +261,7 @@ export default function AboutPage() {
               >
                 <h2 className="mb-6 text-4xl font-black tracking-wide uppercase md:text-5xl">
                   Our{" "}
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                     Story
                   </span>
                 </h2>
@@ -279,11 +273,11 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="leading-relaxed"
                   >
-                    Trinity Fiesta began as a small college gathering and has
+                    {`Trinity Fiesta began as a small college gathering and has
                     evolved into one of the most anticipated cultural festivals
                     in the region. What started with a handful of passionate
                     students has grown into a three-day extravaganza attracting
-                    thousands of participants.
+                    thousands of participants.`}
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, x: -30 }}
@@ -292,11 +286,11 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="leading-relaxed"
                   >
-                    Each year, we push the boundaries of creativity and
+                    {`Each year, we push the boundaries of creativity and
                     innovation, bringing together artists, performers, tech
                     enthusiasts, and cultural ambassadors from across Delhi.
                     Trinity Fiesta is not just an event—it's an experience that
-                    leaves a lasting impact.
+                    leaves a lasting impact.`}
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, x: -30 }}
@@ -305,10 +299,10 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="leading-relaxed"
                   >
-                    Our mission is to provide a platform where talent meets
+                    {`Our mission is to provide a platform where talent meets
                     opportunity, where creativity flourishes, and where memories
                     are made that last a lifetime. Join us in celebrating the
-                    spirit of unity, diversity, and excellence.
+                    spirit of unity, diversity, and excellence.`}
                   </motion.p>
                 </div>
 
@@ -340,7 +334,7 @@ export default function AboutPage() {
                           repeat: Infinity,
                           delay: index * 0.2,
                         }}
-                        className="h-2 w-2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500"
+                        className="h-2 w-2 rounded-full bg-linear-to-r from-amber-400 to-amber-600"
                       />
                       <span className="text-gray-300">{highlight}</span>
                     </motion.div>
@@ -357,11 +351,10 @@ export default function AboutPage() {
                 className="relative"
               >
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden rounded-2xl border-2 border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 shadow-[0_0_40px_rgba(34,211,238,0.3)] backdrop-blur-md"
+                  className="overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md"
                 >
-                  <div className="flex aspect-[4/3] w-full items-center justify-center">
+                  <div className="flex aspect-4/3 w-full items-center justify-center">
                     <div className="text-center">
                       <motion.div
                         animate={{
@@ -373,7 +366,7 @@ export default function AboutPage() {
                           ease: "easeInOut",
                         }}
                       >
-                        <Sparkles className="mx-auto mb-4 h-16 w-16 text-cyan-400" />
+                        <Sparkles className="mx-auto mb-4 h-16 w-16 text-amber-400" />
                       </motion.div>
                       <p className="text-xl font-bold text-white">
                         Trinity Fiesta
@@ -395,7 +388,7 @@ export default function AboutPage() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-gradient-to-br from-cyan-400/20 to-purple-500/20 blur-xl"
+                  className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-linear-to-br from-amber-400/20 to-amber-600/20 blur-xl"
                 />
                 <motion.div
                   animate={{
@@ -406,7 +399,7 @@ export default function AboutPage() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 blur-xl"
+                  className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-linear-to-br from-amber-600/20 to-amber-800/20 blur-xl"
                 />
               </motion.div>
             </div>
@@ -414,14 +407,17 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="px-4 py-20">
+        <section
+          className="px-4 py-20"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
           <div className="mx-auto max-w-4xl">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={fadeInUp}
-              className="rounded-3xl border border-cyan-400/30 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 p-12 text-center backdrop-blur-md"
+              className="rounded-3xl border border-amber-400/30 bg-linear-to-br from-amber-500/10 to-amber-600/10 p-12 text-center backdrop-blur-md shadow-[0_0_40px_rgba(245,158,11,0.2)]"
             >
               <motion.h2
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -431,7 +427,7 @@ export default function AboutPage() {
                 className="mb-4 text-3xl font-black uppercase md:text-4xl"
               >
                 Ready to Join the
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                   {" "}
                   Fiesta
                 </span>
@@ -444,18 +440,17 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mb-8 text-gray-300"
               >
-                Don't miss out on the most exciting cultural festival of the
-                year!
+                {`Don't miss out on the most exciting cultural festival of the
+                year!`}
               </motion.p>
               <motion.a
                 href="/events"
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-8 py-4 font-bold tracking-wider text-white uppercase shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)]"
+                className="inline-flex items-center gap-3 rounded-full bg-linear-to-r from-amber-400 to-amber-600 px-8 py-4 font-bold tracking-wider text-black uppercase shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(245,158,11,0.7)]"
               >
                 View Events
                 <Sparkles className="h-5 w-5" />

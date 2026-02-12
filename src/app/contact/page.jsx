@@ -10,15 +10,15 @@ import {
   Sparkles,
   Instagram,
   Facebook,
-  Twitter,
-  Linkedin,
 } from "lucide-react";
+import { FaWhatsapp, FaGlobe } from "react-icons/fa";
 
 export default function ContactPage() {
   const [mounted, setMounted] = useState(false);
 
   // Scroll to top on page load
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     window.scrollTo(0, 0);
   }, []);
@@ -79,7 +79,32 @@ export default function ContactPage() {
     },
   ];
 
-  const socialLinks = [{ icon: Instagram, link: "#", name: "Instagram" }];
+  const socialLinks = [
+    {
+      icon: Instagram,
+      link: "https://www.instagram.com/trinityfiesta",
+      name: "Instagram",
+      gradient: "from-purple-600 via-pink-600 to-orange-500",
+    },
+    {
+      icon: FaWhatsapp,
+      link: "https://api.whatsapp.com/send?phone=7011689397",
+      name: "WhatsApp",
+      gradient: "from-green-400 to-green-600",
+    },
+    {
+      icon: Facebook,
+      link: "https://www.facebook.com/trinitydwarkafiesta",
+      name: "Facebook",
+      gradient: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: FaGlobe,
+      link: "https://www.tips.edu.in/",
+      name: "Website",
+      gradient: "from-amber-400 to-amber-600",
+    },
+  ];
 
   // Animation variants
   const containerVariants = {
@@ -134,19 +159,6 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="px-4 pt-32">
           <div className="mx-auto max-w-6xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 flex items-center justify-center gap-2"
-            >
-              <Sparkles className="h-6 w-6 text-cyan-400" />
-              <span className="text-sm font-bold tracking-widest text-cyan-400 uppercase">
-                Get In Touch
-              </span>
-              <Sparkles className="h-6 w-6 text-cyan-400" />
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -154,11 +166,12 @@ export default function ContactPage() {
               className="mb-6 text-5xl font-black tracking-wide uppercase md:text-7xl lg:text-8xl"
               style={{
                 background:
-                  "linear-gradient(90deg, #fff, #22d3ee, #a855f7, #fff)",
+                  "linear-gradient(90deg, #F59E0B, #FBBF24, #D97706, #F59E0B)",
                 backgroundSize: "200% 100%",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
+                fontFamily: "var(--font-ethno)",
               }}
             >
               Contact Us
@@ -169,6 +182,7 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-gray-300 md:text-xl"
+              style={{ fontFamily: "var(--font-poppins)" }}
             >
               {`Have questions about Trinity Fiesta? Want to participate or
               sponsor? We'd love to hear from you!`}
@@ -177,7 +191,10 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="px-4 py-10">
+        <section
+          className="px-4 py-10"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
           <div className="mx-auto max-w-6xl">
             <motion.div
               variants={containerVariants}
@@ -189,16 +206,14 @@ export default function ContactPage() {
                 <motion.a
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, y: -5 }}
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-2xl border border-cyan-400/30 bg-black/60 p-8 text-center backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:bg-black/80"
+                  className="group rounded-2xl border border-amber-400/30 bg-black/60 p-8 text-center backdrop-blur-md transition-all duration-300 hover:border-amber-400/60 hover:bg-black/80 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
                 >
                   <motion.div
-                    whileHover={{ rotate: [0, -10, 10, 0] }}
                     transition={{ duration: 0.5 }}
-                    className="mx-auto mb-4 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 p-4"
+                    className="mx-auto mb-4 inline-flex items-center justify-center rounded-full bg-linear-to-br from-amber-400 to-amber-600 p-4 shadow-[0_0_20px_rgba(245,158,11,0.4)]"
                   >
                     <info.icon className="h-8 w-8 text-white" />
                   </motion.div>
@@ -213,297 +228,88 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Form & Info Section */}
-        <section className="px-4 py-20">
+        <section
+          className="px-4 py-20"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* Contact Form */}
+            <div className="grid gap-8 lg:grid-cols-3">
+              {/* Left Column - Social Media (1 column width) */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
-                className="rounded-2xl border border-cyan-400/30 bg-black/60 p-8 backdrop-blur-md md:p-10"
+                className="lg:col-span-1"
               >
-                <h2 className="mb-6 text-3xl font-black tracking-wide uppercase">
-                  Send Us a{" "}
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                    Message
-                  </span>
-                </h2>
-
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Name and Email in Row */}
-                  <div className="grid gap-5 md:grid-cols-2">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.1 }}
-                    >
-                      <label
-                        htmlFor="name"
-                        className="mb-2 block text-sm font-semibold tracking-wide text-gray-300 uppercase"
-                      >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full rounded-lg border border-cyan-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none"
-                        placeholder="John Doe"
-                      />
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.2 }}
-                    >
-                      <label
-                        htmlFor="email"
-                        className="mb-2 block text-sm font-semibold tracking-wide text-gray-300 uppercase"
-                      >
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full rounded-lg border border-cyan-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none"
-                        placeholder="john@example.com"
-                      />
-                    </motion.div>
-                  </div>
-
-                  {/* Phone and Subject in Row */}
-                  <div className="grid gap-5 md:grid-cols-2">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.3 }}
-                    >
-                      <label
-                        htmlFor="phone"
-                        className="mb-2 block text-sm font-semibold tracking-wide text-gray-300 uppercase"
-                      >
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full rounded-lg border border-cyan-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none"
-                        placeholder="+91 98765 43210"
-                      />
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.4 }}
-                    >
-                      <label
-                        htmlFor="subject"
-                        className="mb-2 block text-sm font-semibold tracking-wide text-gray-300 uppercase"
-                      >
-                        Subject
-                      </label>
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="w-full rounded-lg border border-cyan-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none"
-                        placeholder="Event Inquiry"
-                      />
-                    </motion.div>
-                  </div>
-
-                  {/* Message */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <label
-                      htmlFor="message"
-                      className="mb-2 block text-sm font-semibold tracking-wide text-gray-300 uppercase"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="w-full resize-none rounded-lg border border-cyan-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 focus:outline-none"
-                      placeholder="Tell us what you're thinking..."
-                    />
-                  </motion.div>
-
-                  {/* Submit Button */}
-                  <motion.button
-                    type="submit"
-                    disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-8 py-4 font-bold tracking-wider text-white uppercase shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300 hover:shadow-[0_0_50px_rgba(168,85,247,0.7)] disabled:cursor-not-allowed disabled:opacity-50"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="h-5 w-5" />
-                      </>
-                    )}
-                  </motion.button>
-                </form>
-              </motion.div>
-
-              {/* Right Column - Info & Social */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8"
-              >
-                {/* Social Media */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="rounded-2xl border border-cyan-400/30 bg-black/60 p-8 backdrop-blur-md"
+                  className="h-full rounded-2xl border border-amber-400/30 bg-black/60 p-8 backdrop-blur-md shadow-[0_0_20px_rgba(245,158,11,0.2)] flex flex-col justify-center"
                 >
                   <h3 className="mb-6 text-2xl font-black uppercase">
                     Follow{" "}
-                    <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                       Us
                     </span>
                   </h3>
 
-                  {/* Instagram - Full Width */}
-                  <motion.a
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 }}
-                    whileHover={{ scale: 1.05 }}
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center justify-center gap-3 rounded-lg border border-white/10 bg-black/40 p-6 transition-all duration-300 hover:border-cyan-400/50"
-                  >
-                    <Instagram className="h-7 w-7 text-cyan-400" />
-                    <span className="text-lg font-bold text-white">
-                      Instagram
-                    </span>
-                  </motion.a>
-                </motion.div>
-
-                {/* Map */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="overflow-hidden rounded-2xl border-2 border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 shadow-[0_0_40px_rgba(34,211,238,0.3)] backdrop-blur-md"
-                >
-                  <div className="flex aspect-video w-full items-center justify-center">
-                    <div className="text-center">
-                      <motion.div
-                        animate={{
-                          y: [-5, 5, -5],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
+                  {/* Social Media Links */}
+                  <div className="space-y-4">
+                    {socialLinks.map((social, index) => (
+                      <motion.a
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative flex items-center justify-center gap-3 rounded-lg border border-white/10 bg-black/40 p-6 transition-all duration-300 hover:border-amber-400/50 overflow-hidden"
                       >
-                        <MapPin className="mx-auto mb-4 h-12 w-12 text-cyan-400" />
-                      </motion.div>
-                      <p className="text-lg font-bold text-white">
-                        Trinity College
-                      </p>
-                      <p className="text-sm text-gray-400">Delhi, India</p>
-                    </div>
+                        {/* Gradient Background on Hover */}
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                        />
+
+                        {/* Content */}
+                        <div className="relative z-10 flex items-center gap-3">
+                          <social.icon className="h-7 w-7 text-amber-400 group-hover:text-white transition-colors duration-300" />
+                          <span className="text-lg font-bold text-white">
+                            {social.name}
+                          </span>
+                        </div>
+                      </motion.a>
+                    ))}
                   </div>
                 </motion.div>
               </motion.div>
+
+              {/* Right Column - Google Maps (2 columns width) */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6 }}
+                className="lg:col-span-2 min-h-100"
+              >
+                <div className="h-full overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-gradient-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112120.34385188621!2d77.00525743057301!3d28.576946353983306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b1c70e5995f%3A0x9e5d5784767e9da!2sTrinity%20Institute%20of%20Professional%20Studies!5e0!3m2!1sen!2sin!4v1770912068537!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                  />
+                </div>
+              </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="px-4 py-20">
-          <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-              className="mb-12 text-center"
-            >
-              <h2 className="mb-4 text-4xl font-black tracking-wide uppercase md:text-5xl">
-                Frequently Asked{" "}
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Questions
-                </span>
-              </h2>
-            </motion.div>
-
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="space-y-4"
-            >
-              {[
-                {
-                  q: "How do I register for events?",
-                  a: "Visit our Events page and click on the event you're interested in. Follow the registration process to secure your spot.",
-                },
-                {
-                  q: "Is there an entry fee?",
-                  a: "Entry to Trinity Fiesta is free! However, specific events may have participation fees.",
-                },
-              ].map((faq, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ x: 10 }}
-                  className="rounded-xl border border-white/10 bg-black/60 p-6 backdrop-blur-md transition-colors hover:border-cyan-400/30"
-                >
-                  <h4 className="mb-2 text-lg font-bold text-white">{faq.q}</h4>
-                  <p className="text-gray-300">{faq.a}</p>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </section>
       </div>
