@@ -352,55 +352,16 @@ export default function AboutPage() {
               >
                 <motion.div
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md"
+                  className="overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md w-100 h-100"
                 >
-                  <div className="flex aspect-4/3 w-full items-center justify-center">
-                    <div className="text-center">
-                      <motion.div
-                        animate={{
-                          rotate: [0, 10, -10, 0],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                      >
-                        <Sparkles className="mx-auto mb-4 h-16 w-16 text-amber-400" />
-                      </motion.div>
-                      <p className="text-xl font-bold text-white">
-                        Trinity Fiesta
-                      </p>
-                      <p className="text-sm text-gray-400">
-                        Moments that Matter
-                      </p>
-                    </div>
+                  <div className="flex aspect-4/3 w-full h-full items-center justify-center">
+                    <img
+                      src="https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912022/481754612_18050762732332829_6839191128153065189_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_108_ig_cache_key_MzU3NTE1MTYyNjA2NTU5ODEzNjE4MDUwNzYyNzI2MzMyODI5.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLj_qgxjii.jpg"
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </motion.div>
-
-                {/* Floating decorative elements */}
-                <motion.div
-                  animate={{
-                    y: [-10, 10, -10],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-linear-to-br from-amber-400/20 to-amber-600/20 blur-xl"
-                />
-                <motion.div
-                  animate={{
-                    y: [10, -10, 10],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-linear-to-br from-amber-600/20 to-amber-800/20 blur-xl"
-                />
               </motion.div>
             </div>
           </div>
