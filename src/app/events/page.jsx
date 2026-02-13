@@ -361,367 +361,366 @@ const EventCard = ({ event, index, side, inView }) => {
       style={{ fontFamily: "var(--font-josefin)" }}
     >
       {/* MOBILE LAYOUT (< 1024px) */}
-<div className="flex items-start gap-4 pl-16 lg:hidden">
-  {/* Left Timeline Dot */}
-  <div className="absolute top-40 left-4 z-10 flex -translate-x-1/2 items-center justify-center">
-    <motion.div
-      className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
-        inView
-          ? "h-8 w-8 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_20px_rgba(245,158,11,0.9)]"
-          : "h-8 w-8 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
-      }`}
-      animate={{
-        scale: inView ? [1, 1.1, 1] : 1,
-        boxShadow: inView
-          ? [
-              "0 0 20px rgba(245,158,11,0.9)",
-              "0 0 35px rgba(251,191,36,0.9)",
-              "0 0 20px rgba(245,158,11,0.9)",
-            ]
-          : "0 0 0px rgba(245,158,11,0)",
-      }}
-      transition={{
-        duration: inView ? 2 : 0.3,
-        repeat: inView ? Infinity : 0,
-        ease: "easeInOut",
-      }}
-    >
-      <div className="h-4 w-4 rounded-full bg-white" />
-    </motion.div>
-  </div>
-
-  {/* Right Side - Image and Details */}
-  <div className="flex flex-1 flex-col gap-4">
-    {/* Image - TALLER - Clickable */}
-    <motion.a
-      href="/register"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={
-        inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-      }
-      transition={{ delay: 0.2, type: "spring" }}
-      whileHover={{ scale: 1.05 }}
-      className="group relative w-full cursor-pointer"
-    >
-      <div className="relative h-88 w-full overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_25px_rgba(245,158,11,0.3)]">
-        <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
-          <span className="text-5xl font-black text-white/40">
-            {event.name.charAt(0)}
-          </span>
-        </div>
-        <motion.div
-          className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-          whileHover={{ scale: 1 }}
-        >
-          <span className="text-xs font-bold text-white">
-            Register Now
-          </span>
-        </motion.div>
-      </div>
-    </motion.a>
-
-    {/* Details - SHORTER - Clickable */}
-    <motion.a
-      href="/register"
-      initial={{ opacity: 0, x: 20 }}
-      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-      transition={{ delay: 0.3 }}
-      className="w-full cursor-pointer"
-    >
-      <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm hover:border-amber-400/40 hover:bg-black/60 transition-all duration-300">
-        <h3 className="mb-2 text-lg font-bold text-white">
-          Name: {event.name}
-        </h3>
-
-        <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
-          <MapPin className="h-4 w-4 text-amber-400" />
-          <span className="font-semibold">Venue:</span>
-          <span>{event.venue}</span>
-        </div>
-
-        <div className="mb-2 flex items-center gap-2 text-sm text-amber-400">
-          <span className="font-semibold">Time:</span>
-          <span>{event.time}</span>
-        </div>
-
-        <p className="text-sm leading-relaxed text-gray-500 mb-4">
-          {event.description}
-        </p>
-
-        {/* Rulebook Download Button */}
-        <motion.a
-          href="/rulebooks/trinity-fiesta-rulebook.pdf"
-          download="Trinity-Fiesta-Rulebook.pdf"
-          onClick={(e) => e.stopPropagation()}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
-        >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+      <div className="flex items-start gap-4 pl-16 lg:hidden">
+        {/* Left Timeline Dot */}
+        <div className="absolute top-40 left-4 z-10 flex -translate-x-1/2 items-center justify-center">
+          <motion.div
+            className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
+              inView
+                ? "h-8 w-8 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_20px_rgba(245,158,11,0.9)]"
+                : "h-8 w-8 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
+            }`}
+            animate={{
+              scale: inView ? [1, 1.1, 1] : 1,
+              boxShadow: inView
+                ? [
+                    "0 0 20px rgba(245,158,11,0.9)",
+                    "0 0 35px rgba(251,191,36,0.9)",
+                    "0 0 20px rgba(245,158,11,0.9)",
+                  ]
+                : "0 0 0px rgba(245,158,11,0)",
+            }}
+            transition={{
+              duration: inView ? 2 : 0.3,
+              repeat: inView ? Infinity : 0,
+              ease: "easeInOut",
+            }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            />
-          </svg>
-          Download Rulebook
-        </motion.a>
-      </div>
-    </motion.a>
-  </div>
-</div>
+            <div className="h-4 w-4 rounded-full bg-white" />
+          </motion.div>
+        </div>
 
-{/* DESKTOP LAYOUT (>= 1024px) */}
-<div className="hidden items-center lg:flex">
-  {side === "left" ? (
-    <>
-      {/* Left Side: Image FIRST, then Details */}
-      <div className="flex w-5/12 items-center justify-end gap-6 pr-8">
-        {/* Image - LARGER SIZE */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ delay: 0.3, type: "spring" }}
-          className="group relative shrink-0"
-        >
-          <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
-            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
-              <span className="text-6xl font-black text-white/40">
-                {event.name.charAt(0)}
-              </span>
-            </div>
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-              whileHover={{ scale: 1 }}
-            >
-              <span className="text-sm font-bold text-white">
-                View Details
-              </span>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Details - SMALLER */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-          transition={{ delay: 0.2 }}
-          className="flex-1"
-        >
-          <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
-            <h3 className="mb-2 text-lg font-bold text-white">
-              Name: {event.name}
-            </h3>
-
-            <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
-              <MapPin className="h-4 w-4 text-amber-400" />
-              <span className="font-semibold">Venue:</span>
-              <span>{event.venue}</span>
-            </div>
-
-            <p className="text-sm leading-relaxed text-gray-500 mb-4">
-              {event.description}
-            </p>
-
-            {/* Rulebook Download Button */}
-            <motion.a
-              href="/rulebooks/trinity-fiesta-rulebook.pdf"
-              download="Trinity-Fiesta-Rulebook.pdf"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+        {/* Right Side - Image and Details */}
+        <div className="flex flex-1 flex-col gap-4">
+          {/* Image - TALLER - Clickable */}
+          <motion.a
+            href="/register"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={
+              inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+            }
+            transition={{ delay: 0.2, type: "spring" }}
+            whileHover={{ scale: 1.05 }}
+            className="group relative w-full cursor-pointer"
+          >
+            <div className="relative h-88 w-full overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_25px_rgba(245,158,11,0.3)]">
+              <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
+                <span className="text-5xl font-black text-white/40">
+                  {event.name.charAt(0)}
+                </span>
+              </div>
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                whileHover={{ scale: 1 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Download Rulebook
-            </motion.a>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Center: Timeline Dot */}
-      <div className="relative z-10 flex w-2/12 flex-col items-center">
-        <motion.div
-          className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
-            inView
-              ? "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_25px_rgba(245,158,11,0.9)]"
-              : "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
-          }`}
-          animate={{
-            scale: inView ? [1, 1.1, 1] : 1,
-            boxShadow: inView
-              ? [
-                  "0 0 25px rgba(245,158,11,0.9)",
-                  "0 0 45px rgba(251,191,36,0.9)",
-                  "0 0 25px rgba(245,158,11,0.9)",
-                ]
-              : "0 0 0px rgba(245,158,11,0)",
-          }}
-          transition={{
-            duration: inView ? 2 : 0.3,
-            repeat: inView ? Infinity : 0,
-            ease: "easeInOut",
-          }}
-        >
-          <div className="h-5 w-5 rounded-full bg-white" />
-        </motion.div>
-      </div>
-
-      {/* Right Side: Time Badge */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-        transition={{ delay: 0.2 }}
-        className="flex w-5/12 justify-start pl-8"
-      >
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="rounded-full border border-amber-400/30 bg-black/90 px-6 py-2.5 text-lg font-bold text-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)] backdrop-blur-sm"
-        >
-          {event.time}
-        </motion.div>
-      </motion.div>
-    </>
-  ) : (
-    <>
-      {/* Left Side: Time Badge */}
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-        transition={{ delay: 0.2 }}
-        className="flex w-5/12 justify-end pr-8"
-      >
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="rounded-full border border-amber-400/30 bg-black/90 px-6 py-2.5 text-lg font-bold text-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)] backdrop-blur-sm"
-        >
-          {event.time}
-        </motion.div>
-      </motion.div>
-
-      {/* Center: Timeline Dot */}
-      <div className="relative z-10 flex w-2/12 flex-col items-center">
-        <motion.div
-          className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
-            inView
-              ? "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_25px_rgba(245,158,11,0.9)]"
-              : "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
-          }`}
-          animate={{
-            scale: inView ? [1, 1.1, 1] : 1,
-            boxShadow: inView
-              ? [
-                  "0 0 25px rgba(245,158,11,0.9)",
-                  "0 0 45px rgba(251,191,36,0.9)",
-                  "0 0 25px rgba(245,158,11,0.9)",
-                ]
-              : "0 0 0px rgba(245,158,11,0)",
-          }}
-          transition={{
-            duration: inView ? 2 : 0.3,
-            repeat: inView ? Infinity : 0,
-            ease: "easeInOut",
-          }}
-        >
-          <div className="h-5 w-5 rounded-full bg-white" />
-        </motion.div>
-      </div>
-
-      {/* Right Side: Details FIRST, then Image */}
-      <div className="flex w-5/12 items-center justify-start gap-6 pl-8">
-        {/* Details - SMALLER */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-          transition={{ delay: 0.2 }}
-          className="flex-1"
-        >
-          <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
-            <h3 className="mb-2 text-lg font-bold text-white">
-              Name: {event.name}
-            </h3>
-
-            <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
-              <MapPin className="h-4 w-4 text-amber-400" />
-              <span className="font-semibold">Venue:</span>
-              <span>{event.venue}</span>
+                <span className="text-xs font-bold text-white">
+                  Register Now
+                </span>
+              </motion.div>
             </div>
+          </motion.a>
 
-            <p className="text-sm leading-relaxed text-gray-500 mb-4">
-              {event.description}
-            </p>
+          {/* Details - SHORTER - Clickable */}
+          <motion.a
+            href="/register"
+            initial={{ opacity: 0, x: 20 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ delay: 0.3 }}
+            className="w-full cursor-pointer"
+          >
+            <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm hover:border-amber-400/40 hover:bg-black/60 transition-all duration-300">
+              <h3 className="mb-2 text-lg font-bold text-white">
+                Name: {event.name}
+              </h3>
 
-            {/* Rulebook Download Button */}
-            <motion.a
-              href="/rulebooks/trinity-fiesta-rulebook.pdf"
-              download="Trinity-Fiesta-Rulebook.pdf"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
+                <MapPin className="h-4 w-4 text-amber-400" />
+                <span className="font-semibold">Venue:</span>
+                <span>{event.venue}</span>
+              </div>
+
+              <div className="mb-2 flex items-center gap-2 text-sm text-amber-400">
+                <span className="font-semibold">Time:</span>
+                <span>{event.time}</span>
+              </div>
+
+              <p className="text-sm leading-relaxed text-gray-500 mb-4">
+                {event.description}
+              </p>
+
+              {/* Rulebook Download Button */}
+              <motion.a
+                href="/assets/rulebook/rulebook.pdf"
+                download="Trinity-Fiesta-Rulebook.pdf"
+                onClick={(e) => e.stopPropagation()}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Download Rulebook
-            </motion.a>
-          </div>
-        </motion.div>
-
-        {/* Image - LARGER SIZE */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-          transition={{ delay: 0.3, type: "spring" }}
-          className="group relative shrink-0"
-        >
-          <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
-            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
-              <span className="text-6xl font-black text-white/40">
-                {event.name.charAt(0)}
-              </span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Download Rulebook
+              </motion.a>
             </div>
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-              whileHover={{ scale: 1 }}
-            >
-              <span className="text-sm font-bold text-white">
-                View Details
-              </span>
-            </motion.div>
-          </div>
-        </motion.div>
+          </motion.a>
+        </div>
       </div>
-    </>
-  )}
-</div>
 
+      {/* DESKTOP LAYOUT (>= 1024px) */}
+      <div className="hidden items-center lg:flex">
+        {side === "left" ? (
+          <>
+            {/* Left Side: Image FIRST, then Details */}
+            <div className="flex w-5/12 items-center justify-end gap-6 pr-8">
+              {/* Image - LARGER SIZE */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                transition={{ delay: 0.3, type: "spring" }}
+                className="group relative shrink-0"
+              >
+                <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+                  <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
+                    <span className="text-6xl font-black text-white/40">
+                      {event.name.charAt(0)}
+                    </span>
+                  </div>
+                  <motion.div
+                    className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                    whileHover={{ scale: 1 }}
+                  >
+                    <span className="text-sm font-bold text-white">
+                      View Details
+                    </span>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Details - SMALLER */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                transition={{ delay: 0.2 }}
+                className="flex-1"
+              >
+                <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+                  <h3 className="mb-2 text-lg font-bold text-white">
+                    Name: {event.name}
+                  </h3>
+
+                  <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
+                    <MapPin className="h-4 w-4 text-amber-400" />
+                    <span className="font-semibold">Venue:</span>
+                    <span>{event.venue}</span>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-gray-500 mb-4">
+                    {event.description}
+                  </p>
+
+                  {/* Rulebook Download Button */}
+                  <motion.a
+                    href="/assets/rulebook/rulebook.pdf"
+                    download="Trinity-Fiesta-Rulebook.pdf"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    Download Rulebook
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Center: Timeline Dot */}
+            <div className="relative z-10 flex w-2/12 flex-col items-center">
+              <motion.div
+                className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
+                  inView
+                    ? "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_25px_rgba(245,158,11,0.9)]"
+                    : "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
+                }`}
+                animate={{
+                  scale: inView ? [1, 1.1, 1] : 1,
+                  boxShadow: inView
+                    ? [
+                        "0 0 25px rgba(245,158,11,0.9)",
+                        "0 0 45px rgba(251,191,36,0.9)",
+                        "0 0 25px rgba(245,158,11,0.9)",
+                      ]
+                    : "0 0 0px rgba(245,158,11,0)",
+                }}
+                transition={{
+                  duration: inView ? 2 : 0.3,
+                  repeat: inView ? Infinity : 0,
+                  ease: "easeInOut",
+                }}
+              >
+                <div className="h-5 w-5 rounded-full bg-white" />
+              </motion.div>
+            </div>
+
+            {/* Right Side: Time Badge */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+              transition={{ delay: 0.2 }}
+              className="flex w-5/12 justify-start pl-8"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="rounded-full border border-amber-400/30 bg-black/90 px-6 py-2.5 text-lg font-bold text-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)] backdrop-blur-sm"
+              >
+                {event.time}
+              </motion.div>
+            </motion.div>
+          </>
+        ) : (
+          <>
+            {/* Left Side: Time Badge */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ delay: 0.2 }}
+              className="flex w-5/12 justify-end pr-8"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="rounded-full border border-amber-400/30 bg-black/90 px-6 py-2.5 text-lg font-bold text-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)] backdrop-blur-sm"
+              >
+                {event.time}
+              </motion.div>
+            </motion.div>
+
+            {/* Center: Timeline Dot */}
+            <div className="relative z-10 flex w-2/12 flex-col items-center">
+              <motion.div
+                className={`relative flex items-center justify-center rounded-full transition-all duration-400 ease-in-out ${
+                  inView
+                    ? "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 shadow-[0_0_25px_rgba(245,158,11,0.9)]"
+                    : "h-10 w-10 bg-linear-to-r from-amber-400 to-amber-600 opacity-40"
+                }`}
+                animate={{
+                  scale: inView ? [1, 1.1, 1] : 1,
+                  boxShadow: inView
+                    ? [
+                        "0 0 25px rgba(245,158,11,0.9)",
+                        "0 0 45px rgba(251,191,36,0.9)",
+                        "0 0 25px rgba(245,158,11,0.9)",
+                      ]
+                    : "0 0 0px rgba(245,158,11,0)",
+                }}
+                transition={{
+                  duration: inView ? 2 : 0.3,
+                  repeat: inView ? Infinity : 0,
+                  ease: "easeInOut",
+                }}
+              >
+                <div className="h-5 w-5 rounded-full bg-white" />
+              </motion.div>
+            </div>
+
+            {/* Right Side: Details FIRST, then Image */}
+            <div className="flex w-5/12 items-center justify-start gap-6 pl-8">
+              {/* Details - SMALLER */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                transition={{ delay: 0.2 }}
+                className="flex-1"
+              >
+                <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+                  <h3 className="mb-2 text-lg font-bold text-white">
+                    Name: {event.name}
+                  </h3>
+
+                  <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
+                    <MapPin className="h-4 w-4 text-amber-400" />
+                    <span className="font-semibold">Venue:</span>
+                    <span>{event.venue}</span>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-gray-500 mb-4">
+                    {event.description}
+                  </p>
+
+                  {/* Rulebook Download Button */}
+                  <motion.a
+                    href="/rulebooks/trinity-fiesta-rulebook.pdf"
+                    download="Trinity-Fiesta-Rulebook.pdf"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    Download Rulebook
+                  </motion.a>
+                </div>
+              </motion.div>
+
+              {/* Image - LARGER SIZE */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                transition={{ delay: 0.3, type: "spring" }}
+                className="group relative shrink-0"
+              >
+                <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+                  <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
+                    <span className="text-6xl font-black text-white/40">
+                      {event.name.charAt(0)}
+                    </span>
+                  </div>
+                  <motion.div
+                    className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                    whileHover={{ scale: 1 }}
+                  >
+                    <span className="text-sm font-bold text-white">
+                      View Details
+                    </span>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
+          </>
+        )}
+      </div>
     </motion.div>
   );
 };

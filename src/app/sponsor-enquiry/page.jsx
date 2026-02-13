@@ -82,7 +82,7 @@ export default function SponsorEnquiry() {
   };
 
   return (
-    <section className="relative py-20 bg-linear-to-br from-black via-purple-950 to-black overflow-hidden mt-8">
+    <section className="relative py-20 bg-[url('/assets/bookeh5.png')] bg-center bg-cover overflow-hidden mt-8">
       {/* Background Decorations */}
       <div className="absolute inset-0 opacity-10">
         <div

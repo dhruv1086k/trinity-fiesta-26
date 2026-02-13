@@ -112,6 +112,8 @@ export default function GlimpsesSpiral() {
         <div
           className={`absolute bottom-[-480%] left-1/2 -translate-x-1/2 w-[500%] h-[500%] rounded-[50%] z-10 bg-[url('/assets/bookeh5.png')]`}
         />
+        {/* Strong Bottom Black Shadow */}
+        <div className="absolute bottom-0 left-0 right-0 h-72 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none z-10" />
       </div>
     </div>
   );
