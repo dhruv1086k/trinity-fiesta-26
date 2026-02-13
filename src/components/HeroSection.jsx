@@ -279,7 +279,7 @@ export default function HeroSection() {
                 </motion.button>
               </a>
 
-              <a href="/events">
+              <a href="/pass">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -298,7 +298,7 @@ export default function HeroSection() {
       cursor-pointer
     "
                 >
-                  Explore Events
+                  Buy Pass
                 </motion.button>
               </a>
             </motion.div>
@@ -312,41 +312,37 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.3 }}
           className="absolute bottom-0 sm:bottom-4 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
         >
-          <a href="/events">
-            <div className="text-center cursor-pointer group">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
-              >
-                <img src="/assets/eventIcon.png" alt="" />
-              </motion.div>
-              <p className="text-amber-400 text-xs md:text-sm">Events</p>
-            </div>
-          </a>
+          <div className="text-center cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+            >
+              <img src="/assets/eventIcon.png" alt="" />
+            </motion.div>
+            <p className="text-amber-400 text-xs md:text-sm">Events</p>
+          </div>
 
-          <a href="/venue">
-            <div className="text-center cursor-pointer group">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
-              >
-                <img src="/assets/venueIcon.png" alt="" />
-              </motion.div>
-              <p className="text-amber-400 text-xs md:text-sm">Venue</p>
-            </div>
-          </a>
+          <div className="text-center cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+            >
+              <img src="/assets/venueIcon.png" alt="" />
+            </motion.div>
+            <p className="text-amber-400 text-xs md:text-sm">Tips, Dwarka</p>
+          </div>
 
-          <a href="/schedule">
-            <div className="text-center cursor-pointer group">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
-              >
-                <img src="/assets/scheduleIcon.png" alt="" />
-              </motion.div>
-              <p className="text-amber-400 text-xs md:text-sm">Schedule</p>
-            </div>
-          </a>
+          <div className="text-center cursor-pointer group">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+            >
+              <img src="/assets/scheduleIcon.png" alt="" />
+            </motion.div>
+            <p className="text-amber-400 text-xs md:text-sm">
+              26<sup>th</sup> & 27<sup>th</sup> February
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>
