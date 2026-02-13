@@ -55,7 +55,7 @@ export default function LoadingScreen() {
               <motion.path
                 d="M 20 20 L 80 20 M 50 20 L 50 80"
                 stroke="url(#gradient1)"
-                strokeWidth="6"
+                strokeWidth="20"
                 fill="none"
                 strokeLinecap="round"
                 strokeDasharray="200"
@@ -88,7 +88,7 @@ export default function LoadingScreen() {
               <motion.path
                 d="M 40 20 L 60 20 M 50 20 L 50 80 M 40 80 L 60 80"
                 stroke="url(#gradient2)"
-                strokeWidth="6"
+                strokeWidth="20"
                 fill="none"
                 strokeLinecap="round"
                 strokeDasharray="200"
@@ -121,7 +121,7 @@ export default function LoadingScreen() {
               <motion.path
                 d="M 30 20 L 30 80 M 30 20 L 60 20 Q 75 20 75 35 Q 75 50 60 50 L 30 50"
                 stroke="url(#gradient3)"
-                strokeWidth="6"
+                strokeWidth="20"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -155,7 +155,7 @@ export default function LoadingScreen() {
               <motion.path
                 d="M 70 30 Q 70 20 55 20 L 45 20 Q 30 20 30 35 Q 30 50 45 50 L 55 50 Q 70 50 70 65 Q 70 80 55 80 L 45 80 Q 30 80 30 70"
                 stroke="url(#gradient4)"
-                strokeWidth="6"
+                strokeWidth="20"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
