@@ -2,8 +2,11 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
+
+// Default rulebook URL - will be used if event doesn't have specific rulebook
+const DEFAULT_RULEBOOK = "/assets/rulebook/rulebook.pdf";
 
 const eventsData = {
   1: [
@@ -19,6 +22,8 @@ const eventsData = {
       description:
         "Opening ceremony marking the official beginning of Trinity Fiesta 2026.",
       image: "/events/inaugral.jpg",
+      rulebookUrl:
+        "https://console.cloudinary.com/app/c-885d265e2e32d0d5c313909fc7cdeb/assets/media_library/search/asset/dbba030a1569d6e81ac61d705735977f/manage/summary?q=&view_mode=mosaic&context=manage", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
     {
@@ -29,6 +34,7 @@ const eventsData = {
       description:
         "Creative photography competition showcasing powerful visual storytelling.",
       image: "/events/pixclusive.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -40,6 +46,7 @@ const eventsData = {
       description:
         "Solo dance competition celebrating expression, rhythm and technique.",
       image: "/events/nritya.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -51,6 +58,7 @@ const eventsData = {
       description:
         "60-second reel making competition capturing moments creatively.",
       image: "/events/60sec.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -61,6 +69,7 @@ const eventsData = {
       time: "11:00 AM – 3:00 PM",
       description: "Street theatre performances highlighting social themes.",
       image: "/events/rangmanch.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -72,6 +81,7 @@ const eventsData = {
       description:
         "Short film competition focused on storytelling and cinematic execution.",
       image: "/events/uncut.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -82,6 +92,7 @@ const eventsData = {
       time: "11:00 AM – 12:30 PM",
       description: "UI/UX design challenge to creatively redesign a 404 page.",
       image: "/events/404.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -93,6 +104,7 @@ const eventsData = {
       description:
         "Business plan competition promoting innovative legal startup ideas.",
       image: "/events/legal.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -104,6 +116,7 @@ const eventsData = {
       description:
         "Cyber investigation challenge solving simulated digital crime cases.",
       image: "/events/shadow.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -115,6 +128,7 @@ const eventsData = {
       description:
         "Competitive mobile esports battle testing strategy and survival skills.",
       image: "/events/bgmi.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -126,6 +140,7 @@ const eventsData = {
       description:
         "Solo singing competition showcasing vocal talent and stage presence.",
       image: "/events/singstar.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -137,17 +152,19 @@ const eventsData = {
       description:
         "Team-based esports tournament focused on precision and coordination.",
       image: "/events/valorant.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
     {
       id: 13,
-      name: "Innovator’s Print",
+      name: "Innovator's Print",
       venue: "Postproduction Lab",
       time: "11:00 AM – 1:00 PM",
       description:
         "Innovation challenge to design, prototype and present creative solutions.",
       image: "/events/innovator.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -159,6 +176,7 @@ const eventsData = {
       description:
         "Quiz competition testing knowledge across entertainment genres.",
       image: "/events/jeopardy.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -170,6 +188,7 @@ const eventsData = {
       description:
         "Case mapping competition solving real-world business challenges.",
       image: "/events/futureframes.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -181,6 +200,7 @@ const eventsData = {
       description:
         "Literary performance blending poetry, expression and voice.",
       image: "/events/sahitya.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -192,6 +212,7 @@ const eventsData = {
       description:
         "Creative culinary challenge preparing innovative dishes without fire.",
       image: "/events/fireless.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -203,6 +224,7 @@ const eventsData = {
       description:
         "Collage art competition expressing themes through mixed materials.",
       image: "/events/mixmatch.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -214,6 +236,7 @@ const eventsData = {
       description:
         "Radio jockey style competition testing spontaneity and communication.",
       image: "/events/onair.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -225,6 +248,7 @@ const eventsData = {
       description:
         "Creative technical competition blending genres and digital skills.",
       image: "/events/genreglitch.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -236,6 +260,7 @@ const eventsData = {
       description:
         "Academic presentation competition showcasing research and ideas.",
       image: "/events/scholar.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -247,6 +272,7 @@ const eventsData = {
       description:
         "Entrepreneurial pitch competition presenting innovative ideas.",
       image: "/events/brainwave.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -258,6 +284,7 @@ const eventsData = {
       description:
         "Coding competition testing logic, speed and technical skills.",
       image: "/events/codex.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -269,6 +296,7 @@ const eventsData = {
       description:
         "Marketing strategy competition focused on branding innovation.",
       image: "/events/brandbot.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -280,6 +308,7 @@ const eventsData = {
       description:
         "Mime performance competition expressing stories without words.",
       image: "/events/mime.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -291,6 +320,7 @@ const eventsData = {
       description:
         "Strategic auction-based competition testing financial decision making.",
       image: "/events/profitplay.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -302,6 +332,7 @@ const eventsData = {
       description:
         "Intellectual competition challenging analytical and logical skills.",
       image: "/events/battlebrains.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -312,6 +343,7 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description: "Public speaking contest testing persuasion and confidence.",
       image: "/events/talk.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -323,6 +355,7 @@ const eventsData = {
       description:
         "Digital creativity competition focused on short-form content.",
       image: "/events/cybertok.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -333,6 +366,7 @@ const eventsData = {
       time: "1:30 PM – 2:30 PM",
       description: "Dramatic performance competition showcasing acting talent.",
       image: "/events/scene.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -344,6 +378,7 @@ const eventsData = {
       description:
         "Legal drafting competition focusing on practical documentation skills.",
       image: "/events/agreement.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -355,6 +390,7 @@ const eventsData = {
       description:
         "High-energy competitive challenge testing resilience and teamwork.",
       image: "/events/firebound.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -365,6 +401,7 @@ const eventsData = {
       time: "2:30 PM – 4:00 PM",
       description: "Musical performance event celebrating raw vocal talent.",
       image: "/events/voice.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -375,6 +412,7 @@ const eventsData = {
       time: "4:00 PM – 5:00 PM",
       description: "Award ceremony honoring winners and participants.",
       image: "/events/prize.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
   ],
@@ -392,6 +430,7 @@ const eventsData = {
       description:
         "Dance performances showcasing vibrant cultural expressions.",
       image: "/events/rangnritya.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -402,6 +441,7 @@ const eventsData = {
       time: "11:00 AM",
       description: "60-second reel competition capturing festival highlights.",
       image: "/events/60sec.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -413,6 +453,7 @@ const eventsData = {
       description:
         "Live street theatre performances with impactful storytelling.",
       image: "/events/rangmanch.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -424,6 +465,7 @@ const eventsData = {
       description:
         "Creative floor art competition celebrating artistic imagination.",
       image: "/events/floorart.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -435,6 +477,7 @@ const eventsData = {
       description:
         "Clay art competition highlighting traditional craftsmanship.",
       image: "/events/miti.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -445,6 +488,7 @@ const eventsData = {
       time: "1:00 PM",
       description: "Fashion showcase celebrating creativity and confidence.",
       image: "/events/style.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -456,6 +500,7 @@ const eventsData = {
       description:
         "Interactive art-based activity spreading colors and creativity.",
       image: "/events/color.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -466,6 +511,7 @@ const eventsData = {
       time: "3:00 PM",
       description: "Live band performances delivering electrifying music.",
       image: "/events/band.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -476,6 +522,7 @@ const eventsData = {
       time: "5:00 PM",
       description: "Closing ceremony celebrating winners and participants.",
       image: "/events/prize.jpg",
+      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
   ],
@@ -525,7 +572,7 @@ const EventsPage = () => {
           className="pt-32 pb-16 text-center"
         >
           <motion.h1
-            className="text-5xl font-black tracking-[0.2em]  uppercase md:text-8xl pr-2 pl-7 "
+            className="text-5xl font-black tracking-[0.2em] uppercase md:text-8xl pr-2 pl-7"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -681,6 +728,10 @@ const TimelineSection = ({ events }) => {
 // Event Card Component
 const EventCard = ({ event, index, side, inView }) => {
   const ref = useRef(null);
+  const router = useRouter();
+
+  // Get rulebook URL - use event-specific or fall back to default
+  const rulebookUrl = event.rulebookUrl || DEFAULT_RULEBOOK;
 
   return (
     <motion.div
@@ -749,9 +800,7 @@ const EventCard = ({ event, index, side, inView }) => {
 
           {/* Details */}
           <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm hover:border-amber-400/40 hover:bg-black/60 transition-all duration-300">
-            <h3 className="mb-2 text-lg font-bold text-white">
-              Name: {event.name}
-            </h3>
+            <h3 className="mb-2 text-lg font-bold text-white">{event.name}</h3>
 
             <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
               <MapPin className="h-4 w-4 text-amber-400" />
@@ -768,29 +817,18 @@ const EventCard = ({ event, index, side, inView }) => {
               {event.description}
             </p>
 
-            {/* Rulebook Download Button */}
+            {/* Rulebook View Button */}
             <motion.a
-              href="/assets/rulebook/rulebook.pdf"
-              download="Trinity-Fiesta-Rulebook.pdf"
+              href={rulebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Download Rulebook
+              <ExternalLink className="w-4 h-4" />
+              View Rulebook
             </motion.a>
           </div>
         </motion.div>
@@ -832,7 +870,7 @@ const EventCard = ({ event, index, side, inView }) => {
               >
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
                   <h3 className="mb-2 text-lg font-bold text-white">
-                    Name: {event.name}
+                    {event.name}
                   </h3>
 
                   <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
@@ -845,28 +883,17 @@ const EventCard = ({ event, index, side, inView }) => {
                     {event.description}
                   </p>
 
-                  {/* Rulebook Download Button */}
+                  {/* Rulebook View Button */}
                   <motion.a
-                    href="/assets/rulebook/rulebook.pdf"
-                    download="Trinity-Fiesta-Rulebook.pdf"
+                    href={rulebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
                   >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    Download Rulebook
+                    <ExternalLink className="w-4 h-4" />
+                    View Rulebook
                   </motion.a>
                 </div>
               </motion.div>
@@ -971,7 +998,7 @@ const EventCard = ({ event, index, side, inView }) => {
               >
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/40 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)]">
                   <h3 className="mb-2 text-lg font-bold text-white">
-                    Name: {event.name}
+                    {event.name}
                   </h3>
 
                   <div className="mb-2 flex items-center gap-2 text-sm text-gray-400">
@@ -984,28 +1011,17 @@ const EventCard = ({ event, index, side, inView }) => {
                     {event.description}
                   </p>
 
-                  {/* Rulebook Download Button */}
+                  {/* Rulebook View Button */}
                   <motion.a
-                    href="/rulebooks/trinity-fiesta-rulebook.pdf"
-                    download="Trinity-Fiesta-Rulebook.pdf"
+                    href={rulebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
                   >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    Download Rulebook
+                    <ExternalLink className="w-4 h-4" />
+                    View Rulebook
                   </motion.a>
                 </div>
               </motion.div>
@@ -1018,10 +1034,15 @@ const EventCard = ({ event, index, side, inView }) => {
                 className="group relative shrink-0"
               >
                 <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
-                  <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-linear-to-br from-amber-500/30 to-amber-600/30">
-                    <span className="text-6xl font-black text-white/40">
-                      {event.name.charAt(0)}
-                    </span>
+                  <div className="relative h-full w-full overflow-hidden rounded-xl">
+                    <Image
+                      src={event.image}
+                      alt={event.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 300px"
+                      priority={index < 2}
+                    />
                   </div>
                 </div>
               </motion.div>

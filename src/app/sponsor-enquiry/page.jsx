@@ -9,7 +9,7 @@ import {
   Briefcase,
   MessageSquare,
   Send,
-  Sparkles,
+  CheckCircle,
 } from "lucide-react";
 
 export default function SponsorEnquiry() {
@@ -25,6 +25,7 @@ export default function SponsorEnquiry() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -36,22 +37,52 @@ export default function SponsorEnquiry() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b0591dfe-cfaf-4504-802a-234c003a9aae",
+          subject: `Sponsorship Enquiry from ${formData.companyName}`,
+          from_name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.companyName,
+          designation: formData.designation,
+          interested_in: formData.interestedIn,
+          budget: formData.budget,
+          message: formData.message,
+        }),
+      });
 
-    alert("Thank you for your interest! We'll contact you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      companyName: "",
-      designation: "",
-      interestedIn: "",
-      budget: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          companyName: "",
+          designation: "",
+          interestedIn: "",
+          budget: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const sponsorshipOptions = [
@@ -145,6 +176,18 @@ export default function SponsorEnquiry() {
           </p>
         </motion.div>
 
+        {submitStatus === "error" && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8 p-4 rounded-lg bg-red-500/20 border border-red-500/50 max-w-2xl mx-auto"
+          >
+            <p className="text-red-300 font-semibold">
+              Something went wrong. Please try again later.
+            </p>
+          </motion.div>
+        )}
+
         {/* Form Container */}
         <div
           className="grid lg:grid-cols-2 gap-8 items-stretch"
@@ -215,7 +258,7 @@ export default function SponsorEnquiry() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="mb- text-sm font-semibold text-gray-300 uppercase flex items-center gap-2"
+                      className="mb-2 text-sm font-semibold text-gray-300 uppercase flex items-center gap-2"
                     >
                       <Mail className="w-4 h-4 text-amber-400" />
                       Email Address
@@ -351,6 +394,20 @@ export default function SponsorEnquiry() {
                   />
                 </div>
               </div>
+
+              {/* Success/Error Messages */}
+              {submitStatus === "success" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-8 p-4 rounded-lg bg-amber-500/20 border border-amber-500/50 flex items-center gap-3 max-w-2xl mx-auto shadow-[0_0_20px_rgba(245,158,11,0.3)]"
+                >
+                  <CheckCircle className="w-6 h-6 text-amber-400" />
+                  <p className="text-amber-200 font-semibold">
+                    {`Thank you for your interest! We'll contact you soon.`}
+                  </p>
+                </motion.div>
+              )}
 
               {/* Submit Button */}
               <motion.button

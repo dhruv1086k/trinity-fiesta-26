@@ -9,50 +9,52 @@ import {
   Phone,
   Navigation,
   ChevronRight,
-  Code,
+  Instagram,
+  Facebook,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
-  const navItems = ["HOME", "EVENTS", "CONNECT"];
+  const navItems = [
+    { name: "HOME", path: "/" },
+    { name: "EVENTS", path: "/events" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: Instagram,
+      link: "https://www.instagram.com/trinityfiesta",
+      name: "Instagram",
+      gradient: "from-purple-600 via-pink-600 to-orange-500",
+    },
+    {
+      icon: FaWhatsapp,
+      link: "https://api.whatsapp.com/send?phone=7011689397",
+      name: "WhatsApp",
+      gradient: "from-green-400 to-green-600",
+    },
+    {
+      icon: Facebook,
+      link: "https://www.facebook.com/trinitydwarkafiesta",
+      name: "Facebook",
+      gradient: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: FaGlobe,
+      link: "https://www.tips.edu.in/",
+      name: "Website",
+      gradient: "from-amber-400 to-amber-600",
+    },
+  ];
+
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleNavigation = (id) => {
-    const sectionId = id.toLowerCase();
-
-    // 🧠 If user clicks "HOME"
-    if (sectionId === "home") {
-      if (pathname !== "/") {
-        router.push("/");
-        setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 300);
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-      return;
-    }
-
-    // 🔁 For other sections
-    if (pathname !== "/") {
-      router.push("/");
-      setTimeout(() => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          const yOffset = -100;
-          const y =
-            section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      }, 500);
-    } else {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const yOffset = -100;
-        const y =
-          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }
+  const handleNavigation = (path) => {
+    router.push(path);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
   };
 
   const containerVariants = {
@@ -83,10 +85,10 @@ const Footer = () => {
       className="relative overflow-hidden border-t border-white/10 bg-black px-6 pt-20 pb-10 text-white"
       style={{ fontFamily: "var(--font-poppins)" }}
     >
-      {/* linear Background Effect */}
+      {/* Background Effect */}
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-amber-500/5 via-amber-600/5 to-transparent" />
 
-      {/* Top Accent Line with linear */}
+      {/* Top Accent Line */}
       <motion.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -119,9 +121,9 @@ const Footer = () => {
           </motion.div>
           <motion.p
             variants={itemVariants}
-            className=" text-left text-sm leading-relaxed text-gray-300"
+            className="text-left text-sm leading-relaxed text-gray-300"
           >
-            {` TRINITY FIESTA 2026 – Trinity Dwarka's premier tech fest, showcasing
+            {`TRINITY FIESTA 2026 – Trinity Dwarka's premier tech fest, showcasing
             innovation, competitions, and creativity in the digital era!`}
           </motion.p>
         </motion.div>
@@ -134,23 +136,53 @@ const Footer = () => {
           <ul className="space-y-4 text-sm text-gray-300">
             {navItems.map((item, index) => (
               <motion.li
-                key={item}
+                key={item.name}
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <motion.button
-                  onClick={() => handleNavigation(item)}
+                  onClick={() => handleNavigation(item.path)}
                   whileHover={{ x: 5 }}
                   className="group flex cursor-pointer items-center gap-2 transition-colors hover:text-amber-400"
                 >
                   <ChevronRight className="h-4 w-4 text-amber-400 transition-transform group-hover:translate-x-1" />
-                  {item}
+                  {item.name}
                 </motion.button>
               </motion.li>
             ))}
           </ul>
+
+          {/* Social Media Icons */}
+          <div className="mt-8">
+            <h5 className="mb-4 text-sm font-semibold text-gray-400 uppercase tracking-wider">
+              Follow Us
+            </h5>
+            <div className="flex gap-3">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  viewport={{ once: true }}
+                  className="group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-transparent overflow-hidden"
+                >
+                  {/* Gradient Background on Hover */}
+                  <div
+                    className={`absolute inset-0 bg-linear-to-br ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  />
+
+                  {/* Icon */}
+                  <social.icon className="relative z-10 h-5 w-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                </motion.a>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         {/* Column 3 - Event Details */}
@@ -202,10 +234,10 @@ const Footer = () => {
             >
               <Mail className="h-5 w-5 text-amber-400 transition-colors group-hover:text-amber-500" />
               <a
-                href="mailto:tips@tips.edu.in"
+                href="mailto:trinity.fiesta@tips.edu.in"
                 className="hover:text-amber-400"
               >
-                tips@tips.edu.in
+                trinity.fiesta@tips.edu.in
               </a>
             </motion.li>
             <motion.li
@@ -213,8 +245,8 @@ const Footer = () => {
               className="group flex items-center gap-3 transition-colors duration-300"
             >
               <Phone className="h-5 w-5 text-amber-400 transition-colors group-hover:text-amber-500" />
-              <a href="tel:+919315911715" className="hover:text-amber-400">
-                9315911715 , 9315911714
+              <a href="tel:+917011689397" className="hover:text-amber-400">
+                +91 7011689397
               </a>
             </motion.li>
             <motion.li
