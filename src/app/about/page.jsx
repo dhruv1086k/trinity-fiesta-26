@@ -23,14 +23,14 @@ export default function AboutPage() {
 
   const stats = [
     { icon: Calendar, label: "Days of Fun", value: "2" },
-    { icon: Trophy, label: "Events", value: "45+" },
-    { icon: Music, label: "Performances", value: "20+" },
+    { icon: Trophy, label: "Events", value: "40+" },
+    { icon: Music, label: "Performances", value: "10+" },
   ];
 
   const features = [
     {
       icon: Music,
-      title: "Cultural Events",
+      title: "Events",
       description:
         "Experience vibrant dance performances, melodious music competitions, and theatrical masterpieces.",
     },
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mx-auto mb-12 max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl"
               >
-                {` Trinity Fiesta is the annual cultural extravaganza that brings
+                {` Trinity Fiesta is the annual  extravaganza that brings
                 together creativity, talent, and innovation. A celebration of
                 art, music, dance, and technology that transcends boundaries and
                 creates unforgettable memories.`}
@@ -206,7 +206,7 @@ export default function AboutPage() {
               </h2>
               <p className="mx-auto max-w-2xl text-gray-300">
                 A diverse range of events designed to celebrate creativity,
-                innovation, and cultural excellence
+                innovation, and excellence
               </p>
             </motion.div>
 
@@ -274,9 +274,9 @@ export default function AboutPage() {
                     className="leading-relaxed"
                   >
                     {`Trinity Fiesta began as a small college gathering and has
-                    evolved into one of the most anticipated cultural festivals
+                    evolved into one of the most anticipated  festivals
                     in the region. What started with a handful of passionate
-                    students has grown into a three-day extravaganza attracting
+                    students has grown into a two-day extravaganza attracting
                     thousands of participants.`}
                   </motion.p>
                   <motion.p
@@ -288,7 +288,7 @@ export default function AboutPage() {
                   >
                     {`Each year, we push the boundaries of creativity and
                     innovation, bringing together artists, performers, tech
-                    enthusiasts, and cultural ambassadors from across Delhi.
+                    enthusiasts, and  ambassadors from across Delhi.
                     Trinity Fiesta is not just an event—it's an experience that
                     leaves a lasting impact.`}
                   </motion.p>
@@ -315,7 +315,7 @@ export default function AboutPage() {
                   className="mt-8 space-y-3"
                 >
                   {[
-                    "Premier cultural festival of the year",
+                    "Premier  festival of the year",
                     "Platform for emerging artists and performers",
                     "Blend of tradition and modern innovation",
                     "Networking opportunities with industry leaders",
@@ -354,11 +354,12 @@ export default function AboutPage() {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md w-100 h-100"
                 >
-                  <div className="flex aspect-4/3 w-full h-full items-center justify-center">
-                    <img
+                  <div className="flex aspect-4/3 w-full h-full items-center justify-center relative">
+                    <Image
                       src="https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912022/481754612_18050762732332829_6839191128153065189_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_108_ig_cache_key_MzU3NTE1MTYyNjA2NTU5ODEzNjE4MDUwNzYyNzI2MzMyODI5.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLj_qgxjii.jpg"
-                      alt=""
-                      className="w-full h-full object-cover"
+                      alt="Trinity Fiesta celebration"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </motion.div>
@@ -401,7 +402,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mb-8 text-gray-300"
               >
-                {`Don't miss out on the most exciting cultural festival of the
+                {`Don't miss out on the most exciting  festival of the
                 year!`}
               </motion.p>
               <motion.a

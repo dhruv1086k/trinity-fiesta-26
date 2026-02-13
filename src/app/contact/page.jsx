@@ -62,20 +62,20 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@trinityfiesta.com",
-      link: "mailto:info@trinityfiesta.com",
+      details: "trinity.fiesta@tips.edu.in",
+      link: "mailto:trinity.fiesta@tips.edu.in",
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91 98765 43210",
-      link: "tel:+919876543210",
+      details: "+91 70116 89397",
+      link: "tel:+917011689397",
     },
     {
       icon: MapPin,
       title: "Visit Us",
       details: "Trinity College, Delhi, India",
-      link: "https://maps.google.com",
+      link: "https://maps.app.goo.gl/RLuSEznDjYhasRhS6",
     },
   ];
 
@@ -251,7 +251,7 @@ export default function ContactPage() {
                 >
                   <h3 className="mb-6 text-2xl font-black uppercase">
                     Follow{" "}
-                    <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                       Us
                     </span>
                   </h3>
@@ -272,7 +272,7 @@ export default function ContactPage() {
                       >
                         {/* Gradient Background on Hover */}
                         <div
-                          className={`absolute inset-0 bg-gradient-to-r ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                          className={`absolute inset-0 bg-linear-to-r ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                         />
 
                         {/* Content */}
@@ -296,7 +296,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.6 }}
                 className="lg:col-span-2 min-h-100"
               >
-                <div className="h-full overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-gradient-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md">
+                <div className="h-full overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 shadow-[0_0_40px_rgba(245,158,11,0.3)] backdrop-blur-md">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112120.34385188621!2d77.00525743057301!3d28.576946353983306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b1c70e5995f%3A0x9e5d5784767e9da!2sTrinity%20Institute%20of%20Professional%20Studies!5e0!3m2!1sen!2sin!4v1770912068537!5m2!1sen!2sin"
                     width="100%"
