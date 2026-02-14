@@ -163,7 +163,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/valorant_dx8smd.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/valorant_c82kt2.pdf", // No new URL provided for Valorant specifically, kept original.
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/valorant_f7zr5l.pdf",
       registernow:
         "https://docs.google.com/forms/d/1Rjli737Dj5YELhikUpFmL4XdWwKsBEYRDql_i_f18e0",
       side: "left",
