@@ -336,7 +336,7 @@ export default function AboutPage() {
                 >
                   <div className="flex aspect-4/3 w-full h-full items-center justify-center relative">
                     <Image
-                      src="https://res.cloudinary.com/deuzzyw0k/image/upload/v1770912022/481754612_18050762732332829_6839191128153065189_n.jpg_stp_dst-jpg_e15_tt6__nc_cat_108_ig_cache_key_MzU3NTE1MTYyNjA2NTU5ODEzNjE4MDUwNzYyNzI2MzMyODI5.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLj_qgxjii.jpg"
+                      src="https://res.cloudinary.com/deuzzyw0k/image/upload/v1771067990/Modern_Aesthetic_Wedding_Photo_Collage_Instagram_Post_dds9ty.png"
                       alt="Trinity Fiesta celebration"
                       fill
                       className="object-cover"
