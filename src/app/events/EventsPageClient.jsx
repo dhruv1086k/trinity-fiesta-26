@@ -10,7 +10,6 @@ const eventsData = {
     // =========================
     // 26 FEB 2026 – Trinity Dwarka
     // =========================
-
     {
       id: 1,
       name: "Inaugural Session",
@@ -30,14 +29,13 @@ const eventsData = {
       description:
         "Creative photography competition showcasing powerful visual storytelling.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/pixclusive_wfcrps.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/pixclusive_qsmzsg.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048172/pixclusive_ecnkbv.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Pixclusive_lkgp1h.pdf",
       registernow:
         "https://docs.google.com/forms/d/1ahHn8NXNSvc85BNkKypidQ_nforDnM_7XIeJH0XrjBI",
       side: "right",
     },
-
     {
       id: 3,
       name: "Nritya Nivedan",
@@ -46,14 +44,13 @@ const eventsData = {
       description:
         "Solo dance competition celebrating expression, rhythm and technique.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/nrityanivedan_skl5l6.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/nrityanivedan_so1xuk.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/nrityaNivedan_unf2bf.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Nritya_Nivedan_x6ul5t.pdf",
       registernow:
         "https://docs.google.com/forms/d/1MQkA7EgOYTp33bsk76C7IYGfAQ5sCEL89aqfPnoUTuw",
       side: "left",
     },
-
     {
       id: 4,
       name: "60 Sec Saga",
@@ -62,14 +59,13 @@ const eventsData = {
       description:
         "60-second reel making competition capturing moments creatively.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/60secsaga_cbqke5.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/60SecSaga_b5pxme.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/60secsaga_kn9b43.pdf",
       registernow:
         "https://docs.google.com/forms/d/1X3pB841oH2DPtg64fLg2BDuOliY9Dwt03FkSEx_gagI",
       side: "right",
     },
-
     {
       id: 5,
       name: "NATPARN - Nukkad Natak",
@@ -77,14 +73,13 @@ const eventsData = {
       time: "11:00 AM – 3:00 PM",
       description: "Street theatre performances highlighting social themes.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/natparn_ae6qrx.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/NATPARN_irv5mu.pdf",
       registernow:
         "https://docs.google.com/forms/d/1M3rUJv7bPz3aNcvujUgFqbQi1YxHxxm61sXwqt1PiRs",
       side: "left",
     },
-
     {
       id: 6,
       name: "Uncut Stories",
@@ -95,12 +90,11 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010741/uncutstories_ptazb0.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/uncutStories_jzdw7f.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Uncut_Stories_it11ae.pdf",
       registernow:
         "https://docs.google.com/forms/d/1BAQ3soC4X8TIl5Ch0jaIlOTOpF7wIajYcgQPWJMCyu0",
       side: "right",
     },
-
     {
       id: 7,
       name: "The 404 Makeover",
@@ -108,14 +102,13 @@ const eventsData = {
       time: "11:00 AM – 12:30 PM",
       description: "UI/UX design challenge to creatively redesign a 404 page.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/the404makeover_dmpblq.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/404_iokmjb.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/404Makeover_mz69fr.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/The_404_Makeover_dragah.pdf",
       registernow:
         "https://docs.google.com/forms/d/1bZfaXKZ-Nt3pRieNSh-j033aySnIE3_lh6dxsvVn26U",
       side: "left",
     },
-
     {
       id: 8,
       name: "Legal Startup and Business Plan",
@@ -124,13 +117,12 @@ const eventsData = {
       description:
         "Business plan competition promoting innovative legal startup ideas.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/legalstartupandbusinessplan_ozfxij.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/legalstartup_kohy0y.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/legalStartUp_j0wipi.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069794/Legal_Startup_and_Business_Plan_nldxps.pdf",
       registernow: "",
       side: "right",
     },
-
     {
       id: 9,
       name: "Shadow Trace",
@@ -139,9 +131,9 @@ const eventsData = {
       description:
         "Cyber investigation challenge solving simulated digital crime cases.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/shadowtrace_lu4mvw.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/shadowtrace_aloddl.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/shadowTrace_ko2b4n.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Shadow_Trace_mx2arf.pdf",
       registernow:
         "https://docs.google.com/forms/d/1grhQJIsDWVZt-dowkRs-9bEUydDJVN2UZFFvr7TQIIo",
       side: "left",
@@ -154,14 +146,13 @@ const eventsData = {
       description:
         "Solo singing competition showcasing vocal talent and stage presence.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/singstararena_fkvdvj.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/singstar_xlkz7p.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/singStarArena_dxaho9.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Sing_Star_Arena_lmsxfo.pdf",
       registernow:
         "https://docs.google.com/forms/d/1pVSFHWSqLjSlk0RKYRUKX1uYXqK6t5h9uA7i5UFs98U",
       side: "right",
     },
-
     {
       id: 12,
       name: "Valorant",
@@ -170,14 +161,13 @@ const eventsData = {
       description:
         "Team-based esports tournament focused on precision and coordination.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/valorant_scgmrt.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/valorant_dx8smd.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/valorant_c82kt2.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/valorant_c82kt2.pdf", // No new URL provided for Valorant specifically, kept original.
       registernow:
         "https://docs.google.com/forms/d/1Rjli737Dj5YELhikUpFmL4XdWwKsBEYRDql_i_f18e0",
       side: "left",
     },
-
     {
       id: 13,
       name: "Innovator's Print",
@@ -186,14 +176,13 @@ const eventsData = {
       description:
         "Innovation challenge to design, prototype and present creative solutions.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/innovatorsprint_mjvojp.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/innovatorsprint_ry2o34.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/innovatorPrint_so93yq.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Innovator_s_Print_e3kyhw.pdf",
       registernow:
         "https://docs.google.com/forms/d/1WcvVV5EKcYMr0Jd3Fxe1FifFL4mOoR6qUYjEfdoTZCY",
       side: "right",
     },
-
     {
       id: 14,
       name: "Genre Jeopardy",
@@ -202,14 +191,13 @@ const eventsData = {
       description:
         "Quiz competition testing knowledge across entertainment genres.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/genrejeopardy_ylxspj.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/genrejeopardy_x9nzy1.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGeopardy_xe2mgs.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Genre_Jeopardy_fm5kge.pdf",
       registernow:
         "https://docs.google.com/forms/d/1tKPJzAbB8clk9I2PWU6rgTI82OO1LGOPk52rRRPQ8Us",
       side: "left",
     },
-
     {
       id: 15,
       name: "Future Frames",
@@ -218,14 +206,13 @@ const eventsData = {
       description:
         "Case mapping competition solving real-world business challenges.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010740/futureframes_xzhhlw.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064732/futureframes_qgmspu.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/futureFrames_wga3zb.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Future_Frames_gvkmq0.pdf",
       registernow:
         "https://docs.google.com/forms/d/11qcC-zDUx0pmIEEYWbC9TU7Xu3spI73-9mHgkw9T8Q0",
       side: "right",
     },
-
     {
       id: 16,
       name: "Sahitya Sangam",
@@ -234,14 +221,13 @@ const eventsData = {
       description:
         "Literary performance blending poetry, expression and voice.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010717/sahityasangam_aexqhe.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/sahityasangam_ckxn5s.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/sahityaSangam_dbfdce.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Sahitya_Sangam_snjyhx.pdf",
       registernow:
         "https://docs.google.com/forms/d/1CVYMsHxn66yudrxqW7DYA14-dqFgtOprsl1hcB1ZHX8",
       side: "left",
     },
-
     {
       id: 17,
       name: "Fireless Fusion",
@@ -250,14 +236,13 @@ const eventsData = {
       description:
         "Creative culinary challenge preparing innovative dishes without fire.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/firelessfusion_rl92te.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064728/firelessfusion_e4ildd.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771053110/firelessfusion_wjrvg2.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Fireless_fusion_andwrp.pdf",
       registernow:
         "https://docs.google.com/forms/d/1NkY9qm1pViRTcyZEIYPFRYJA4DmvW6Uj3YLscNaktk8",
       side: "right",
     },
-
     {
       id: 18,
       name: "Mix-N-Match Art",
@@ -266,14 +251,13 @@ const eventsData = {
       description:
         "Collage art competition expressing themes through mixed materials.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/mixnmatchart_veivbl.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/mixnmatch_xpkcdl.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/mixNMatch_nl4fm7.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069815/Mix-N-Match_Art_xxgms7.pdf",
       registernow:
         "https://docs.google.com/forms/d/1EDzl-Vi8d0ME_47A1LbWHHIaqVam5rtEpS3kpSWyfMU/",
       side: "left",
     },
-
     {
       id: 19,
       name: "On-Air Challenge",
@@ -282,14 +266,13 @@ const eventsData = {
       description:
         "Radio jockey style competition testing spontaneity and communication.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/onairchallenge_uzmpi9.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/onairchallenge_k2se7o.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/onAirChallenge_ickxom.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069823/On-Air_Challenge_ckm04i.pdf",
       registernow:
         "https://docs.google.com/forms/d/1Np3-mxW_x00yiJm45JLh21LJDr9AROAJaha7ZDav-zk",
       side: "right",
     },
-
     {
       id: 20,
       name: "Genre Glitch",
@@ -298,14 +281,13 @@ const eventsData = {
       description:
         "Creative technical competition blending genres and digital skills.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/genreglitch_yc9xii.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/genreglitch_iynvme.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGlitch_knmeok.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Genre_Glitch_euepbz.pdf",
       registernow:
         "https://docs.google.com/forms/d/1BEoywMvEi8g3fXmLtVA92DdPC2U_s5eHXShsH1ztCxk",
       side: "left",
     },
-
     {
       id: 21,
       name: "Scholar Stage",
@@ -314,9 +296,9 @@ const eventsData = {
       description:
         "Academic presentation competition showcasing research and ideas.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/scholarsstage_s99nkl.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/scholarstage_q3qui1.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/scholarStage_b5w57l.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Scholar_Stage_hmcvce.pdf",
       registernow:
         "https://docs.google.com/forms/d/1Ux5wTvfg-58OP1DBaKdqWwgWHGT4M0r9jCaTJ329DPk",
       side: "right",
@@ -329,9 +311,9 @@ const eventsData = {
       description:
         "Competitive mobile esports battle testing strategy and survival skills.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/bgmiegame_drmv7m.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/bgmi_wskq0t.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/bgmi_u49g1j.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/BGMI_v4q5zx.pdf",
       registernow:
         "https://docs.google.com/forms/d/1pSmOwUO0qhYHMACOINFtcC5WnuO-Ek23bHAMCQxtbaM/",
       side: "left",
@@ -344,14 +326,13 @@ const eventsData = {
       description:
         "Entrepreneurial pitch competition presenting innovative ideas.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/brainwavepitch_pxev09.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/brainwavepitch_zszpev.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/brainWavePitch_g20v1w.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/brainwavepitch_uqid7l.pdf",
       registernow:
         "https://docs.google.com/forms/d/1IG7-C04Sp25V9DU7xpurWiBEEd0O2ffeS_7_fYRQak4",
       side: "right",
     },
-
     {
       id: 23,
       name: "Codex Build",
@@ -360,14 +341,13 @@ const eventsData = {
       description:
         "Coding competition testing logic, speed and technical skills.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/codexbuild_g2g3ud.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/codexbuild_a6s56g.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048159/codexBuild_gpygpk.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/codex_vy3wx8.pdf",
       registernow:
         "https://docs.google.com/forms/d/1eXg9VT4oE5cS1X3s06dTXGRb6Br-kJQj6gO3_4CLkkc",
       side: "left",
     },
-
     {
       id: 24,
       name: "Brand Bot",
@@ -376,14 +356,13 @@ const eventsData = {
       description:
         "Marketing strategy competition focused on branding innovation.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010673/barndbot_affqa6.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/brandbot_ll722r.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771057546/brand_bot_1_kk3v0c.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Brand_Bot_sqfrh0.pdf",
       registernow:
         "https://docs.google.com/forms/d/14X_8TtDUDxAo9rCP4sDzP_cJLPo0HT9bsruz0SoDBbk",
       side: "right",
     },
-
     {
       id: 25,
       name: "Mime Magic",
@@ -392,14 +371,13 @@ const eventsData = {
       description:
         "Mime performance competition expressing stories without words.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010675/mimemagic_usishw.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/mimemagic_n9irl7.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/mimeMagic_lzavhx.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Mime_Magic_hesjw9.pdf",
       registernow:
         "https://docs.google.com/forms/d/18mjIsUZYVj7gMhE3JiJDTK2gdHmO6VTGdgF_dEz2mkA",
       side: "left",
     },
-
     {
       id: 26,
       name: "Profit Play Auction",
@@ -408,14 +386,13 @@ const eventsData = {
       description:
         "Strategic auction-based competition testing financial decision making.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/profitplayauction_tv6ace.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/profitplay_qsirmi.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771057546/profit_play_1_r44ssx.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Profit_Play_Auction_ddstcv.pdf",
       registernow:
         "https://docs.google.com/forms/d/1wSGBVhLIkL_xKTPDTLQnRHeuta8SMqfnZkwgLoG-9Io",
       side: "right",
     },
-
     {
       id: 27,
       name: "Battle of Brains",
@@ -424,14 +401,13 @@ const eventsData = {
       description:
         "Intellectual competition challenging analytical and logical skills.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/battleofbrains_ppejw8.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/battleofbrains_squswd.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/battleOfBrains_zfyxib.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Battle_of_Brains_maoxtp.pdf",
       registernow:
         "https://docs.google.com/forms/d/1iflORKWWDuAgpP_BbviZvjrEyaS6dyKF_HC_5_Djmdw",
       side: "left",
     },
-
     {
       id: 28,
       name: "Talk Knockout",
@@ -439,14 +415,13 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description: "Public speaking contest testing persuasion and confidence.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/talkknockout_q6ch1p.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/talkknockout_ro9fks.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/talkKnockout_uro5ti.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Talk_Knockout_orfxgo.pdf",
       registernow:
         "https://docs.google.com/forms/d/1_4mm8y8YHQTNfqk7IwO441tUwBvfryVAwjeBrdiSdw8",
       side: "right",
     },
-
     {
       id: 29,
       name: "Cyber Tok",
@@ -455,14 +430,13 @@ const eventsData = {
       description:
         "Digital creativity competition focused on short-form content.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/cybertok_l1ddfi.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/cybertok_di2wqm.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/cyberTok_ca3kcc.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/CyberTok_ok6qoh.pdf",
       registernow:
         "https://docs.google.com/forms/d/13_n7oXsHrIj5ydc2TjJl3a437ALjA0KdOCWXhTKTYAY",
       side: "left",
     },
-
     {
       id: 30,
       name: "Scene Stealers",
@@ -470,14 +444,13 @@ const eventsData = {
       time: "1:30 PM – 2:30 PM",
       description: "Dramatic performance competition showcasing acting talent.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/scenestealers_omilzq.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/scenestealers_dm5r4n.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/sceneStealers_apnryl.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Scene_Stealers_wwcefg.pdf",
       registernow:
         "https://docs.google.com/forms/d/15hPc8aVg6NPQuSWw78S2-Q0d7Bbg0p5twvbuEdSFTjQ",
       side: "right",
     },
-
     {
       id: 31,
       name: "Agreement Drafting and Presentation Competition",
@@ -486,13 +459,12 @@ const eventsData = {
       description:
         "Legal drafting competition focusing on practical documentation skills.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010672/agreementdraftingandpresentationcompetition_mlhnzu.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/agreementdrafting_asfcd4.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/agreementDrafting_edtuzz.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069710/Agreement_Drafting_and_Presentation_Competition_ixqske.pdf",
       registernow: "",
       side: "left",
     },
-
     {
       id: 32,
       name: "Fire Bound",
@@ -501,14 +473,13 @@ const eventsData = {
       description:
         "High-energy competitive challenge testing resilience and teamwork.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/firebound_zm8rsy.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/firebound_hdld72.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/fireBound_blutec.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Firebound_obngud.pdf",
       registernow:
         "https://docs.google.com/forms/d/1jZL1VnzdE4p0ou1nFPwFUoE8e1mn4gij-k4xMyU0tEo",
       side: "right",
     },
-
     {
       id: 33,
       name: "Voice Unplugged",
@@ -516,14 +487,13 @@ const eventsData = {
       time: "2:30 PM – 4:00 PM",
       description: "Musical performance event celebrating raw vocal talent.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/voiceunplegged_ifelad.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/voiceunplugged_twzavg.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/voiceUnplugged_db86dq.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Voice_Unplugged_ex8kcd.pdf",
       registernow:
         "https://docs.google.com/forms/d/1XxUfaa1o9N4hOqSe_hbkANYfhwUELu84B_voFsROUAU",
       side: "left",
     },
-
     {
       id: 34,
       name: "Prize Distribution",
@@ -540,7 +510,6 @@ const eventsData = {
     // =========================
     // 27 FEB 2026 – Dilli Haat Janakpuri
     // =========================
-
     {
       id: 35,
       name: "Rang Nritya",
@@ -549,14 +518,13 @@ const eventsData = {
       description:
         "Dance performances showcasing vibrant cultural expressions.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/rangnritya_kpv1c5.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/rangnritya_nstom6.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/rangNritya_uwizrp.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Rang_Nritya_pulksm.pdf",
       registernow:
         "https://docs.google.com/forms/d/14YoN4bLLKqlk7Qr5uvap22Ickd2uXJz4AImr7wpS8eU",
       side: "left",
     },
-
     {
       id: 36,
       name: "60 Sec Saga",
@@ -564,14 +532,13 @@ const eventsData = {
       time: "11:00 AM",
       description: "60-second reel competition capturing festival highlights.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/60secsaga_cbqke5.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/60SecSaga_b5pxme.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/60secsaga_kn9b43.pdf",
       registernow:
         "https://docs.google.com/forms/d/1X3pB841oH2DPtg64fLg2BDuOliY9Dwt03FkSEx_gagI",
       side: "right",
     },
-
     {
       id: 37,
       name: "NATPARN - Nukkad Natak",
@@ -580,14 +547,13 @@ const eventsData = {
       description:
         "Live street theatre performances with impactful storytelling.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/natparn_ae6qrx.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/NATPARN_irv5mu.pdf",
       registernow:
         "https://docs.google.com/forms/d/1M3rUJv7bPz3aNcvujUgFqbQi1YxHxxm61sXwqt1PiRs",
       side: "left",
     },
-
     {
       id: 38,
       name: "Floor Art Fiesta - Rangoli",
@@ -596,14 +562,13 @@ const eventsData = {
       description:
         "Creative floor art competition celebrating artistic imagination.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/floorartfiestarangoli_pofdoi.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/floorartfiesta_lq8m55.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/floorArtFiesta_zzuqv5.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069745/Floor_Art_Fiesta_-_Rangoli_dy0xrg.pdf",
       registernow:
         "https://docs.google.com/forms/d/1GHub3B-EQ4c_63gVua9hBc0SIpeCR--o6RZq1kB8RP8",
       side: "right",
     },
-
     {
       id: 39,
       name: "Miti Kala Kriti",
@@ -612,14 +577,13 @@ const eventsData = {
       description:
         "Clay art competition highlighting traditional craftsmanship.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/mitikalakriticlaymodelling_mmiflf.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/mitikalakriti_zzabb9.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/mitiKalakriti_shooe3.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Miti_Kala_Kriti_xrcrrj.pdf",
       registernow:
         "https://docs.google.com/forms/d/1ZPqquC9uaXw-zgW0R8YWP2Z0R6E9EWJ2JwOx9uwqX_o",
       side: "left",
     },
-
     {
       id: 40,
       name: "Style Parade",
@@ -627,14 +591,13 @@ const eventsData = {
       time: "1:00 PM",
       description: "Fashion showcase celebrating creativity and confidence.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/styleparade_ppo7jc.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/styleparade_lobnmk.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/styleParadise_gtpwp3.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Style_Parade_u5ktt6.pdf",
       registernow:
         "https://docs.google.com/forms/d/1CdGbxgPvC03QT9ORxAjUj4zLqZkYO59Zmws2BJASIa0",
       side: "right",
     },
-
     {
       id: 41,
       name: "Color Me Up",
@@ -643,14 +606,13 @@ const eventsData = {
       description:
         "Interactive art-based activity spreading colors and creativity.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/colormeupfacepainting_berbje.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/colormeup_zrhkmp.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048159/colorMeUp_btjeyw.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Color_Me_Up_apkq7x.pdf",
       registernow:
         "https://docs.google.com/forms/d/1qGtPWjiD4DlCXPzB1yOoaENUb6gMKRFV4JcS4vJ3Q78",
       side: "left",
     },
-
     {
       id: 42,
       name: "Band Dominion",
@@ -658,14 +620,13 @@ const eventsData = {
       time: "3:00 PM",
       description: "Live band performances delivering electrifying music.",
       image:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010671/banddominion_jvfqm3.png",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/banddominion_suaj0i.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/bandDominion_lovw3r.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Band_Dominion_wlvs6q.pdf",
       registernow:
         "https://docs.google.com/forms/d/10BbAsWtlRuK9pKech2ETDj8YcGrP4UKlgWRbivEsFes",
       side: "right",
     },
-
     {
       id: 43,
       name: "Prize Distribution",
