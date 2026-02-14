@@ -66,12 +66,14 @@ const eventsData = {
 
     {
       id: 5,
-      name: "Rangmanch",
+      name: "Natparn",
       venue: "Under Metro Line",
       time: "11:00 AM – 3:00 PM",
       description: "Street theatre performances highlighting social themes.",
-      image: "/events/rangmanch.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/natparn_fmq4yb.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -507,13 +509,15 @@ const eventsData = {
 
     {
       id: 37,
-      name: "Rangmanch",
-      venue: "Near Tree",
+      name: "NATPRAN - Nukkad Natak",
+      venue: "Near Tree, Dilli Haat",
       time: "11:00 AM",
       description:
         "Live street theatre performances with impactful storytelling.",
-      image: "/events/rangmanch.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/natparn_fmq4yb.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
