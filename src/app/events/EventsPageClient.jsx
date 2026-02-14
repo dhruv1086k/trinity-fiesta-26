@@ -252,7 +252,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/firelessfusion_rl92te.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771050861/firelessfusion_fsxbcz.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771053110/firelessfusion_wjrvg2.pdf",
       registernow:
         "https://docs.google.com/forms/d/1NkY9qm1pViRTcyZEIYPFRYJA4DmvW6Uj3YLscNaktk8",
       side: "right",
