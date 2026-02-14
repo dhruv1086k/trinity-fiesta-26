@@ -32,7 +32,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/pixclusive_wfcrps.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/pixclusive_ecnkby.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048172/pixclusive_ecnkbv.pdf",
       registernow:
         "https://docs.google.com/forms/d/1ahHn8NXNSvc85BNkKypidQ_nforDnM_7XIeJH0XrjBI",
       side: "right",
@@ -80,7 +80,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1M3rUJv7bPz3aNcvujUgFqbQi1YxHxxm61sXwqt1PiRs",
       side: "left",
     },
 
@@ -110,7 +111,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/the404makeover_dmpblq.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/404Makeover_mz69fr.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1bZfaXKZ-Nt3pRieNSh-j033aySnIE3_lh6dxsvVn26U",
       side: "left",
     },
 
@@ -140,7 +142,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/shadowtrace_lu4mvw.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/shadowTrace_ko2b4n.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1grhQJIsDWVZt-dowkRs-9bEUydDJVN2UZFFvr7TQIIo",
       side: "left",
     },
     {
@@ -170,7 +173,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/valorant_scgmrt.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/valorant_c82kt2.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1Rjli737Dj5YELhikUpFmL4XdWwKsBEYRDql_i_f18e0",
       side: "left",
     },
 
@@ -201,7 +205,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/genrejeopardy_ylxspj.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGeopardy_xe2mgs.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1tKPJzAbB8clk9I2PWU6rgTI82OO1LGOPk52rRRPQ8Us",
       side: "left",
     },
 
@@ -247,7 +252,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/firelessfusion_rl92te.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/firelessFusion_mgoprn.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771050861/firelessfusion_fsxbcz.pdf",
       registernow:
         "https://docs.google.com/forms/d/1NkY9qm1pViRTcyZEIYPFRYJA4DmvW6Uj3YLscNaktk8",
       side: "right",
@@ -296,7 +301,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/genreglitch_yc9xii.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGlitch_knmeok.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1BEoywMvEi8g3fXmLtVA92DdPC2U_s5eHXShsH1ztCxk",
       side: "left",
     },
 
@@ -311,7 +317,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/scholarsstage_s99nkl.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/scholarStage_b5w57l.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1Ux5wTvfg-58OP1DBaKdqWwgWHGT4M0r9jCaTJ329DPk",
       side: "right",
     },
     {
@@ -325,7 +332,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/bgmiegame_drmv7m.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/bgmi_u49g1j.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1pSmOwUO0qhYHMACOINFtcC5WnuO-Ek23bHAMCQxtbaM/",
       side: "left",
     },
     {
@@ -354,8 +362,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/codexbuild_g2g3ud.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/codexBuild_gpypgk.pdf",
-      registernow: "",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048159/codexBuild_gpygpk.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1eXg9VT4oE5cS1X3s06dTXGRb6Br-kJQj6gO3_4CLkkc",
       side: "left",
     },
 
@@ -418,7 +427,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/battleofbrains_ppejw8.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/battleOfBrains_zfyxib.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1iflORKWWDuAgpP_BbviZvjrEyaS6dyKF_HC_5_Djmdw",
       side: "left",
     },
 
@@ -448,7 +458,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/cybertok_l1ddfi.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/cyberTok_ca3kcc.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/13_n7oXsHrIj5ydc2TjJl3a437ALjA0KdOCWXhTKTYAY",
       side: "left",
     },
 
@@ -493,7 +504,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/firebound_zm8rsy.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/fireBound_blutec.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1jZL1VnzdE4p0ou1nFPwFUoE8e1mn4gij-k4xMyU0tEo",
       side: "right",
     },
 
@@ -540,7 +552,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/rangnritya_kpv1c5.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/rangNritya_uwizrp.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/14YoN4bLLKqlk7Qr5uvap22Ickd2uXJz4AImr7wpS8eU",
       side: "left",
     },
 
@@ -570,7 +583,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1M3rUJv7bPz3aNcvujUgFqbQi1YxHxxm61sXwqt1PiRs",
       side: "left",
     },
 
@@ -585,7 +599,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/floorartfiestarangoli_pofdoi.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/floorArtFiesta_zzuqv5.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1GHub3B-EQ4c_63gVua9hBc0SIpeCR--o6RZq1kB8RP8",
       side: "right",
     },
 
@@ -600,7 +615,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/mitikalakriticlaymodelling_mmiflf.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/mitiKalakriti_shooe3.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1ZPqquC9uaXw-zgW0R8YWP2Z0R6E9EWJ2JwOx9uwqX_o",
       side: "left",
     },
 
@@ -614,7 +630,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/styleparade_ppo7jc.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/styleParadise_gtpwp3.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/1CdGbxgPvC03QT9ORxAjUj4zLqZkYO59Zmws2BJASIa0",
       side: "right",
     },
 
@@ -628,7 +645,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/colormeupfacepainting_berbje.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/colorMeUp_btjyew.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771048159/colorMeUp_btjeyw.pdf",
       registernow:
         "https://docs.google.com/forms/d/1qGtPWjiD4DlCXPzB1yOoaENUb6gMKRFV4JcS4vJ3Q78",
       side: "left",
@@ -644,7 +661,8 @@ const eventsData = {
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010671/banddominion_jvfqm3.png",
       rulebookUrl:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/bandDominion_lovw3r.pdf",
-      registernow: "",
+      registernow:
+        "https://docs.google.com/forms/d/10BbAsWtlRuK9pKech2ETDj8YcGrP4UKlgWRbivEsFes",
       side: "right",
     },
 
