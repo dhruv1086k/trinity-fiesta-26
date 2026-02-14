@@ -273,11 +273,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="leading-relaxed"
                   >
-                    {`Trinity Fiesta began as a small college gathering and has
-                    evolved into one of the most anticipated  festivals
-                    in the region. What started with a handful of passionate
-                    students has grown into a two-day extravaganza attracting
-                    thousands of participants.`}
+                    {`Trinity Fiesta is a grand inter-disciplinary festival that brings together innovation, talent, and enthusiasm on a single platform. It is a unique amalgamation of four dynamic events: Pixclusive 10.0 (Photo Exhibition), Tech-Samaroh 6.0 (Technical Fest), Unmad 5.0 (Cultural Fest), and Urja 3.0 (Management Fest). Together, these four pillars form Trinity Fiesta- a vibrant celebration of knowledge, creativity, leadership, holistic development, and the unstoppable energy of youth.`}
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, x: -30 }}
@@ -286,23 +282,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="leading-relaxed"
                   >
-                    {`Each year, we push the boundaries of creativity and
-                    innovation, bringing together artists, performers, tech
-                    enthusiasts, and  ambassadors from across Delhi.
-                    Trinity Fiesta is not just an event—it's an experience that
-                    leaves a lasting impact.`}
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className="leading-relaxed"
-                  >
-                    {`Our mission is to provide a platform where talent meets
-                    opportunity, where creativity flourishes, and where memories
-                    are made that last a lifetime. Join us in celebrating the
-                    spirit of unity, diversity, and excellence.`}
+                    {`Trinity Fiesta aims to provide students with a platform to showcase their skills beyond academics, encouraging participation in technical, artistic, cultural, and managerial domains. The festival reflects the spirit of modern education, where learning is not confined to classrooms but extends to real-world experiences, collaboration, and innovation.`}
                   </motion.p>
                 </div>
 

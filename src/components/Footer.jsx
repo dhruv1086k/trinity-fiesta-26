@@ -331,7 +331,7 @@ const Footer = () => {
             <p className="text-[12px] tracking-tighter text-gray-400 uppercase">
               Designed by
             </p>
-            <p className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-sm font-black text-transparent transition-all">
+            <p className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-sm font-black text-transparent transition-all">
               APEX Designing Society
             </p>
           </div>

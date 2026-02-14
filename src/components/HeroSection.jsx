@@ -293,7 +293,7 @@ export default function HeroSection() {
       border border-amber-300
       text-amber-300
       font-semibold
-      px-4 py-2 md:px-10 md:py-4
+      px-8 py-2 md:px-16 md:py-4
       rounded-full
       shadow-lg shadow-amber-500/10
       hover:bg-white/20
@@ -345,7 +345,7 @@ export default function HeroSection() {
               <img src="/assets/scheduleIcon.webp" alt="" />
             </motion.div>
             <p className="text-amber-400 text-xs md:text-sm">
-              26<sup>th</sup> & 27<sup>th</sup> February
+              26<sup>th</sup> & 27<sup>th</sup>
             </p>
           </div>
         </motion.div>
