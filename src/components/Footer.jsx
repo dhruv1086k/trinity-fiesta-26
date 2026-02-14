@@ -31,7 +31,7 @@ const Footer = () => {
     },
     {
       icon: FaWhatsapp,
-      link: "https://api.whatsapp.com/send?phone=7011689397",
+      link: "https://api.whatsapp.com/send?phone=8006004620",
       name: "WhatsApp",
       gradient: "from-green-400 to-green-600",
     },

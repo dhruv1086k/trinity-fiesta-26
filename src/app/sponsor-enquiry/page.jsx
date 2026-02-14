@@ -291,7 +291,7 @@ export default function SponsorEnquiry() {
                       onChange={handleChange}
                       required
                       className="w-full rounded-lg border border-amber-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-amber-400 focus:ring-2 focus:ring-amber-400/50 focus:outline-none"
-                      placeholder="+91 9876543210"
+                      placeholder="+91 98XXXXXX34"
                     />
                   </div>
                 </div>
