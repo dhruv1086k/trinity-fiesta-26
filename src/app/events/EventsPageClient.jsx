@@ -32,7 +32,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/pixclusive_wfcrps.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036451/pixclusive_xercsj.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/pixclusive_ecnkby.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1ahHn8NXNSvc85BNkKypidQ_nforDnM_7XIeJH0XrjBI",
       side: "right",
     },
 
@@ -46,7 +48,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/nrityanivedan_skl5l6.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/nrityaNivedan_ugznqh.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/nrityaNivedan_unf2bf.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1MQkA7EgOYTp33bsk76C7IYGfAQ5sCEL89aqfPnoUTuw",
       side: "left",
     },
 
@@ -60,7 +64,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/60SecSaga_znaa70.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/60SecSaga_b5pxme.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1X3pB841oH2DPtg64fLg2BDuOliY9Dwt03FkSEx_gagI",
       side: "right",
     },
 
@@ -73,7 +79,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/natparn_fmq4yb.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -87,7 +94,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010741/uncutstories_ptazb0.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036452/uncutStories_tg7yoc.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/uncutStories_jzdw7f.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1BAQ3soC4X8TIl5Ch0jaIlOTOpF7wIajYcgQPWJMCyu0",
       side: "right",
     },
 
@@ -100,7 +109,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/the404makeover_dmpblq.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036452/404Makeover_etvav6.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/404Makeover_mz69fr.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -114,7 +124,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/legalstartupandbusinessplan_ozfxij.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/legalStartUp_wh3u0o.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/legalStartUp_j0wipi.pdf",
+      registernow: "",
       side: "right",
     },
 
@@ -128,7 +139,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/shadowtrace_lu4mvw.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/shadowTrace_eabrqp.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/shadowTrace_ko2b4n.pdf",
+      registernow: "",
       side: "left",
     },
     {
@@ -141,7 +153,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/singstararena_fkvdvj.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/singStarArena_o5pimu.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/singStarArena_dxaho9.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1pVSFHWSqLjSlk0RKYRUKX1uYXqK6t5h9uA7i5UFs98U",
       side: "right",
     },
 
@@ -155,7 +169,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/valorant_scgmrt.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036451/valorant_ucjp2c.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/valorant_c82kt2.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -169,7 +184,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/innovatorsprint_mjvojp.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/innovatorPrint_zezkoy.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/innovatorPrint_so93yq.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1WcvVV5EKcYMr0Jd3Fxe1FifFL4mOoR6qUYjEfdoTZCY",
       side: "right",
     },
 
@@ -183,7 +200,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/genrejeopardy_ylxspj.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/genreGeopardy_oxgnbh.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGeopardy_xe2mgs.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -197,7 +215,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010740/futureframes_xzhhlw.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/futureFrames_z4th5d.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/futureFrames_wga3zb.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/11qcC-zDUx0pmIEEYWbC9TU7Xu3spI73-9mHgkw9T8Q0",
       side: "right",
     },
 
@@ -211,7 +231,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010717/sahityasangam_aexqhe.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/sahityaSangam_nuuvsz.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/sahityaSangam_dbfdce.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1CVYMsHxn66yudrxqW7DYA14-dqFgtOprsl1hcB1ZHX8",
       side: "left",
     },
 
@@ -225,7 +247,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/firelessfusion_rl92te.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/firelessFusion_hgnmpg.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/firelessFusion_mgoprn.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1NkY9qm1pViRTcyZEIYPFRYJA4DmvW6Uj3YLscNaktk8",
       side: "right",
     },
 
@@ -239,7 +263,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/mixnmatchart_veivbl.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/mixNMatch_m7cftf.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/mixNMatch_nl4fm7.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1EDzl-Vi8d0ME_47A1LbWHHIaqVam5rtEpS3kpSWyfMU/",
       side: "left",
     },
 
@@ -253,7 +279,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/onairchallenge_uzmpi9.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/onAirChallenge_en1x6p.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/onAirChallenge_ickxom.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1Np3-mxW_x00yiJm45JLh21LJDr9AROAJaha7ZDav-zk",
       side: "right",
     },
 
@@ -267,7 +295,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/genreglitch_yc9xii.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/genreGlitch_adljhi.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/genreGlitch_knmeok.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -281,7 +310,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/scholarsstage_s99nkl.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/scholarStage_a3kjp2.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/scholarStage_b5w57l.pdf",
+      registernow: "",
       side: "right",
     },
     {
@@ -294,7 +324,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/bgmiegame_drmv7m.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/bgmi_ts6cn3.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/bgmi_u49g1j.pdf",
+      registernow: "",
       side: "left",
     },
     {
@@ -307,7 +338,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/brainwavepitch_pxev09.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/brainWavePitch_ql4shp.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/brainWavePitch_g20v1w.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1IG7-C04Sp25V9DU7xpurWiBEEd0O2ffeS_7_fYRQak4",
       side: "right",
     },
 
@@ -321,7 +354,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/codexbuild_g2g3ud.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/codexBuild_mjj4ef.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/codexBuild_gpypgk.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -335,7 +369,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010673/barndbot_affqa6.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/brandBot_o4kxjs.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/brandBot_l2rg4s.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/14X_8TtDUDxAo9rCP4sDzP_cJLPo0HT9bsruz0SoDBbk",
       side: "right",
     },
 
@@ -349,7 +385,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010675/mimemagic_usishw.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/mimeMagic_vqqmpc.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/mimeMagic_lzavhx.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/18mjIsUZYVj7gMhE3JiJDTK2gdHmO6VTGdgF_dEz2mkA",
       side: "left",
     },
 
@@ -363,7 +401,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/profitplayauction_tv6ace.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/profitPlayAuction_l4ho80.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/profitPlayAuction_g1oquw.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1wSGBVhLIkL_xKTPDTLQnRHeuta8SMqfnZkwgLoG-9Io",
       side: "right",
     },
 
@@ -377,7 +417,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/battleofbrains_ppejw8.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/battleOfBrains_mnbpro.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/battleOfBrains_zfyxib.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -390,7 +431,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/talkknockout_q6ch1p.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/talkKnockout_higs9u.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/talkKnockout_uro5ti.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1_4mm8y8YHQTNfqk7IwO441tUwBvfryVAwjeBrdiSdw8",
       side: "right",
     },
 
@@ -404,7 +447,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/cybertok_l1ddfi.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/cyberTok_ixlrx4.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/cyberTok_ca3kcc.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -417,7 +461,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/scenestealers_omilzq.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/sceneStealers_konbso.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/sceneStealers_apnryl.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/15hPc8aVg6NPQuSWw78S2-Q0d7Bbg0p5twvbuEdSFTjQ",
       side: "right",
     },
 
@@ -431,7 +477,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010672/agreementdraftingandpresentationcompetition_mlhnzu.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/agreementDrafting_mrwf92.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/agreementDrafting_edtuzz.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -445,7 +492,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/firebound_zm8rsy.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/fireBound_gg67u6.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/fireBound_blutec.pdf",
+      registernow: "",
       side: "right",
     },
 
@@ -458,7 +506,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/voiceunplegged_ifelad.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/voiceUnplugged_lwwglx.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/voiceUnplugged_db86dq.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1XxUfaa1o9N4hOqSe_hbkANYfhwUELu84B_voFsROUAU",
       side: "left",
     },
 
@@ -470,7 +520,6 @@ const eventsData = {
       description: "Award ceremony honoring winners and participants.",
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771037591/360_F_1807663292_FfzBf70fyP4nnTx5wznRbyiLeNymLkes_nbvxph.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
   ],
@@ -490,7 +539,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/rangnritya_kpv1c5.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/rangNritya_qsl9mj.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/rangNritya_uwizrp.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -503,7 +553,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/60SecSaga_znaa70.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/60SecSaga_b5pxme.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1X3pB841oH2DPtg64fLg2BDuOliY9Dwt03FkSEx_gagI",
       side: "right",
     },
 
@@ -517,7 +569,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/natparn_ujlr8x.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/natparn_fmq4yb.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/natparn_lgn6sn.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -531,7 +584,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/floorartfiestarangoli_pofdoi.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/floorArtFiesta_arqwcg.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/floorArtFiesta_zzuqv5.pdf",
+      registernow: "",
       side: "right",
     },
 
@@ -545,7 +599,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/mitikalakriticlaymodelling_mmiflf.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/mitiKalakriti_heknjp.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/mitiKalakriti_shooe3.pdf",
+      registernow: "",
       side: "left",
     },
 
@@ -558,7 +613,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/styleparade_ppo7jc.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/styleParadise_nirijr.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/styleParadise_gtpwp3.pdf",
+      registernow: "",
       side: "right",
     },
 
@@ -572,7 +628,9 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/colormeupfacepainting_berbje.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/colorMeUp_rccmop.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/colorMeUp_btjyew.pdf",
+      registernow:
+        "https://docs.google.com/forms/d/1qGtPWjiD4DlCXPzB1yOoaENUb6gMKRFV4JcS4vJ3Q78",
       side: "left",
     },
 
@@ -585,7 +643,8 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010671/banddominion_jvfqm3.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/bandDominion_snckxd.pdf", // Add specific Cloudinary URL here or leave empty for default
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/bandDominion_lovw3r.pdf",
+      registernow: "",
       side: "right",
     },
 
@@ -597,7 +656,6 @@ const eventsData = {
       description: "Closing ceremony celebrating winners and participants.",
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771037591/360_F_1807663292_FfzBf70fyP4nnTx5wznRbyiLeNymLkes_nbvxph.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
   ],
@@ -807,6 +865,7 @@ const EventCard = ({ event, index, side, inView }) => {
 
   // Get rulebook URL
   const rulebookUrl = event.rulebookUrl;
+  const registernow = event.registernow || "";
 
   return (
     <motion.div
@@ -864,12 +923,6 @@ const EventCard = ({ event, index, side, inView }) => {
                   priority={index < 2}
                 />
               </div>
-
-              <motion.div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-linear-to-br from-amber-500/90 to-amber-600/90 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-xs font-bold text-white">
-                  Register Now
-                </span>
-              </motion.div>
             </div>
           </motion.div>
 
@@ -901,10 +954,26 @@ const EventCard = ({ event, index, side, inView }) => {
                 onClick={(e) => e.stopPropagation()}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full mb-2"
               >
                 <ExternalLink className="w-4 h-4" />
                 View Rulebook
+              </motion.a>
+            ) : null}
+
+            {/* Register Button */}
+            {registernow?.trim() ? (
+              <motion.a
+                href={registernow}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Register Now
               </motion.a>
             ) : null}
           </div>
@@ -916,7 +985,7 @@ const EventCard = ({ event, index, side, inView }) => {
         {side === "left" ? (
           <>
             {/* Left Side: Image FIRST, then Details */}
-            <div className="flex w-5/12 items-center justify-end gap-6 pr-8">
+            <div className="flex w-5/12 items-center justify-end gap-6 ">
               {/* Image - LARGER SIZE */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -924,7 +993,7 @@ const EventCard = ({ event, index, side, inView }) => {
                 transition={{ delay: 0.3, type: "spring" }}
                 className="group relative shrink-0"
               >
-                <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+                <div className="relative h-76 w-60 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
                   <div className="relative h-full w-full overflow-hidden rounded-xl">
                     <Image
                       src={event.image}
@@ -969,10 +1038,26 @@ const EventCard = ({ event, index, side, inView }) => {
                       onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full mb-2"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Rulebook
+                    </motion.a>
+                  ) : null}
+
+                  {/* Register Button */}
+                  {registernow?.trim() ? (
+                    <motion.a
+                      href={registernow}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Register Now
                     </motion.a>
                   ) : null}
                 </div>
@@ -1068,7 +1153,7 @@ const EventCard = ({ event, index, side, inView }) => {
             </div>
 
             {/* Right Side: Details FIRST, then Image */}
-            <div className="flex w-5/12 items-center justify-start gap-6 pl-8">
+            <div className="flex w-5/12 items-center justify-start gap-6">
               {/* Details - SMALLER */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -1100,10 +1185,26 @@ const EventCard = ({ event, index, side, inView }) => {
                       onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full mb-2"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Rulebook
+                    </motion.a>
+                  ) : null}
+
+                  {/* Register Button */}
+                  {registernow?.trim() ? (
+                    <motion.a
+                      href={registernow}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Register Now
                     </motion.a>
                   ) : null}
                 </div>
@@ -1116,7 +1217,7 @@ const EventCard = ({ event, index, side, inView }) => {
                 transition={{ delay: 0.3, type: "spring" }}
                 className="group relative shrink-0"
               >
-                <div className="relative h-64 w-52 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+                <div className="relative h-76 w-60 overflow-hidden rounded-2xl border-2 border-amber-400/30 bg-linear-to-br from-amber-500/20 to-amber-600/20 p-2 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
                   <div className="relative h-full w-full overflow-hidden rounded-xl">
                     <Image
                       src={event.image}
