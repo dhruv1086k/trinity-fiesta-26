@@ -317,20 +317,25 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.3 }}
           className="w-full grid grid-cols-3 max-w-5xl mx-auto mt-16 px-4 text-center"
         >
-          <div className="text-center cursor-pointer group">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+          <div className="text-center group">
+            <a
+              href="https://res.cloudinary.com/deuzzyw0k/image/upload/v1771056652/mainrulebook_kriia7.pdf"
+              target="_blank"
             >
-              <img src="/assets/eventIcon.webp" alt="" />
-            </motion.div>
-            <p className="text-amber-400 text-xs md:text-sm">Events</p>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center cursor-pointer"
+              >
+                <img src="/assets/eventIcon.webp" alt="" />
+              </motion.div>
+              <p className="text-amber-400 text-xs md:text-sm">View Rulebook</p>
+            </a>
           </div>
 
-          <div className="text-center cursor-pointer group">
+          <div className="text-center  group">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center cursor-pointer"
             >
               <img src="/assets/scheduleIcon.webp" alt="" />
             </motion.div>
@@ -339,10 +344,10 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="text-center cursor-pointer group">
+          <div className="text-center  group">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
+              className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center cursor-pointer"
             >
               <img src="/assets/venueIcon.webp" alt="" />
             </motion.div>
