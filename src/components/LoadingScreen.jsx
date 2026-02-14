@@ -41,7 +41,7 @@ export default function LoadingScreen() {
           />
         </div>
 
-        <div className="text-center max-w-4xl px-10 md:px-6 relative z-10">
+        <div className="text-center w-full max-w-4xl px-6 sm:px-8 md:px-6 relative z-10">
           {/* T I P S Letters */}
           <div className="flex justify-center items-center gap-4 md:gap-8 mb-12">
             {/* T */}
