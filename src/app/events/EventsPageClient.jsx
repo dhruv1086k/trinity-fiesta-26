@@ -72,7 +72,7 @@ const eventsData = {
 
     {
       id: 5,
-      name: "Natparn",
+      name: "NATPARN - Nukkad Natak",
       venue: "Under Metro Line",
       time: "11:00 AM – 3:00 PM",
       description: "Street theatre performances highlighting social themes.",
@@ -378,7 +378,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010673/barndbot_affqa6.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/brandBot_l2rg4s.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771057546/brand_bot_1_kk3v0c.pdf",
       registernow:
         "https://docs.google.com/forms/d/14X_8TtDUDxAo9rCP4sDzP_cJLPo0HT9bsruz0SoDBbk",
       side: "right",
@@ -410,7 +410,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/profitplayauction_tv6ace.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/profitPlayAuction_g1oquw.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771057546/profit_play_1_r44ssx.pdf",
       registernow:
         "https://docs.google.com/forms/d/1wSGBVhLIkL_xKTPDTLQnRHeuta8SMqfnZkwgLoG-9Io",
       side: "right",
@@ -574,7 +574,7 @@ const eventsData = {
 
     {
       id: 37,
-      name: "NATPRAN - Nukkad Natak",
+      name: "NATPARN - Nukkad Natak",
       venue: "Near Tree, Dilli Haat",
       time: "11:00 AM",
       description:
