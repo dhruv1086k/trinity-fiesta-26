@@ -37,7 +37,7 @@ export default function BuyPassPage() {
         className="relative w-48 h-12 md:w-64 md:h-20 mb-12 "
       >
         <Image
-          src="/assets/ruppee.webp"
+          src="/assets/ruppee1.0.webp"
           alt="Rupee Symbol"
           fill
           className="object-contain"
