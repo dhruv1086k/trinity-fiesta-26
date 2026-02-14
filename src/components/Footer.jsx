@@ -123,7 +123,7 @@ const Footer = () => {
             variants={itemVariants}
             className="text-left text-sm leading-relaxed text-gray-300"
           >
-            {`TRINITY FIESTA 2026 – Trinity Dwarka's premier tech fest, showcasing
+            {`TRINITY FIESTA 2026 – Trinity Dwarka's premier annual fest, showcasing
             innovation, competitions, and creativity in the digital era!`}
           </motion.p>
         </motion.div>

@@ -315,7 +315,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="w-full flex justify-around items-center px-8 max-w-5xl mx-auto mt-16"
+          className="w-full grid grid-cols-3 max-w-5xl mx-auto mt-16 px-4 text-center"
         >
           <div className="text-center cursor-pointer group">
             <motion.div
@@ -332,9 +332,11 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
             >
-              <img src="/assets/venueIcon.webp" alt="" />
+              <img src="/assets/scheduleIcon.webp" alt="" />
             </motion.div>
-            <p className="text-amber-400 text-xs md:text-sm">Tips, Dwarka</p>
+            <p className="text-amber-400 text-xs md:text-sm">
+              26<sup>th</sup> & 27<sup>th</sup> Feb
+            </p>
           </div>
 
           <div className="text-center cursor-pointer group">
@@ -342,11 +344,9 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
             >
-              <img src="/assets/scheduleIcon.webp" alt="" />
+              <img src="/assets/venueIcon.webp" alt="" />
             </motion.div>
-            <p className="text-amber-400 text-xs md:text-sm">
-              26<sup>th</sup> & 27<sup>th</sup>
-            </p>
+            <p className="text-amber-400 text-xs md:text-sm">Tips, Dwarka</p>
           </div>
         </motion.div>
       </div>
