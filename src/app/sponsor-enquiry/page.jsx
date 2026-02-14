@@ -113,7 +113,7 @@ export default function SponsorEnquiry() {
   };
 
   return (
-    <section className="relative py-20 bg-[url('/assets/bookeh5.png')] bg-center bg-cover overflow-hidden mt-8">
+    <section className="relative py-20 bg-[url('/assets/bookeh5.webp')] bg-center bg-cover overflow-hidden mt-8">
       {/* Background Decorations */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -291,7 +291,7 @@ export default function SponsorEnquiry() {
                       onChange={handleChange}
                       required
                       className="w-full rounded-lg border border-amber-400/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 transition-all focus:border-amber-400 focus:ring-2 focus:ring-amber-400/50 focus:outline-none"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9876543210"
                     />
                   </div>
                 </div>

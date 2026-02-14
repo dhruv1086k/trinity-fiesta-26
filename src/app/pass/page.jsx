@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function BuyPassPage() {
   return (
     <div
-      className="min-h-screen bg-black text-white bg-[url('/assets/bookeh5.png')] bg-center bg-cover flex flex-col items-center justify-center px-6 py-16"
+      className="min-h-screen bg-black text-white bg-[url('/assets/bookeh5.webp')] bg-center bg-cover flex flex-col items-center justify-center px-6 py-16"
       style={{ fontFamily: "var(--font-poppins)" }}
     >
       {/* Heading */}
@@ -36,7 +36,7 @@ export default function BuyPassPage() {
         className="relative w-full max-w-3xl h-[250px] md:h-[350px] mb-12"
       >
         <Image
-          src="/assets/pass.png"
+          src="/assets/pass.webp"
           alt="Event Pass"
           fill
           className="object-contain rounded-2xl shadow-2xl"

@@ -110,7 +110,7 @@ export default function AboutPage() {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/assets/bg.png"
+          src="/assets/bg.webp"
           alt="Background"
           fill
           className="object-cover opacity-30"

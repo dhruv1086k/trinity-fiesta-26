@@ -3,7 +3,7 @@ import React from "react";
 
 const EnquirySection = () => {
   return (
-    <section className="relative w-full pb-20 pt-36 bg-[url('/assets/bookeh5.png')] bg-cover text-white">
+    <section className="relative w-full pb-20 pt-36 bg-[url('/assets/bookeh5.webp')] bg-cover text-white">
       {/* Strong Top Black Shadow */}
       <div className="absolute top-0 left-0 right-0 h-[40vh] bg-gradient-to-b from-black via-black/5 to-transparent pointer-events-none z-20" />
 

@@ -112,7 +112,7 @@ const Footer = () => {
           <motion.div className="mb-6 flex items-center gap-3">
             <div className="relative h-20 w-50">
               <Image
-                src="/assets/trinityFiestaLogo.png"
+                src="/assets/trinityFiestaLogo.webp"
                 fill
                 alt="TRINITY FIESTA Logo"
                 className="rounded-lg object-cover"
@@ -245,8 +245,8 @@ const Footer = () => {
               className="group flex items-center gap-3 transition-colors duration-300"
             >
               <Phone className="h-5 w-5 text-amber-400 transition-colors group-hover:text-amber-500" />
-              <a href="tel:+917011689397" className="hover:text-amber-400">
-                +91 7011689397
+              <a href="tel:+918006004620" className="hover:text-amber-400">
+                +91 8006004620
               </a>
             </motion.li>
             <motion.li
@@ -267,7 +267,7 @@ const Footer = () => {
         </motion.div>
       </motion.div>
 
-      {/* Credits Section */}
+      {/* Credits Section with alfa */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ const Footer = () => {
         </p>
 
         <motion.a
-          href="https://share.google/1BjhhYbBWPe1q0PSr"
+          href="https://alfacodingclub.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex cursor-pointer items-center gap-4"
@@ -295,7 +295,7 @@ const Footer = () => {
           </div>
           <motion.div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-amber-400/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]">
             <Image
-              src="/assets/logoAlfa.jpeg"
+              src="/assets/logoAlfa.webp"
               fill
               alt="ALFA Coding Club Logo"
               className="rounded-full object-cover"
@@ -303,6 +303,69 @@ const Footer = () => {
           </motion.div>
         </motion.a>
       </motion.div>
+
+      {/* Credits Section with alfa & apex */}
+      {/* <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative z-10 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row"
+      >
+        <motion.a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex cursor-pointer items-center gap-4"
+        >
+          <motion.div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-blue-400/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+            <Image
+              src="/assets/logoApex.webp"
+              fill
+              alt="Apex Society"
+              className="rounded-full object-cover"
+            />
+          </motion.div>
+
+          <div>
+            <p className="text-[12px] tracking-tighter text-gray-400 uppercase">
+              Designed by
+            </p>
+            <p className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-sm font-black text-transparent transition-all">
+              APEX Designing Society
+            </p>
+          </div>
+        </motion.a>
+
+        <p className="text-center text-[12px] tracking-widest text-gray-400 uppercase md:text-[14px]">
+          © 2026 TRINITY FIESTA. All Rights Reserved.
+        </p>
+
+        <motion.a
+          href="https://share.google/1BjhhYbBWPe1q0PSr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex cursor-pointer items-center gap-4"
+        >
+          <div className="text-right">
+            <p className="text-[12px] tracking-tighter text-gray-400 uppercase">
+              Developed by
+            </p>
+            <p className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-sm font-black text-transparent transition-all">
+              ALFA CODING CLUB
+            </p>
+          </div>
+
+          <motion.div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 transition-all duration-500 group-hover:border-amber-400/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+            <Image
+              src="/assets/logoAlfa.webp"
+              fill
+              alt="ALFA Coding Club Logo"
+              className="rounded-full object-cover"
+            />
+          </motion.div>
+        </motion.a>
+      </motion.div> */}
     </footer>
   );
 };

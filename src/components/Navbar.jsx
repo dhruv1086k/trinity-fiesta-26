@@ -139,7 +139,7 @@ export default function Navbar() {
                         style={{ fontFamily: "var(--font-ethno)" }}
                       >
                         <img
-                          src="/assets/trinityFiestaLogo.png"
+                          src="/assets/trinityFiestaLogo.webp"
                           alt=""
                           className="w-30"
                         />
@@ -292,7 +292,11 @@ function MobileNavLink({ item, isActive, onClick }) {
 
   return (
     <motion.div variants={variants} className="text-center">
-      <Link href={item.href} onClick={onClick} className="relative inline-block">
+      <Link
+        href={item.href}
+        onClick={onClick}
+        className="relative inline-block"
+      >
         <motion.div
           whileTap={{ scale: 0.95 }}
           onHoverStart={() => setIsHovered(true)}

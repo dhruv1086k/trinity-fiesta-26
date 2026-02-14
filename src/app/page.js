@@ -9,7 +9,7 @@ import EnquirySection from "@/components/EnquirySection";
 export default function Home() {
   return (
     <>
-      <div className="bg-[url('/assets/bookeh5.png')] bg-center bg-cover ">
+      <div className="bg-[url('/assets/bookeh5.webp')] bg-center bg-cover ">
         <HeroSection />
         <EventVideoSection />
         <GlimpsesSpiral />

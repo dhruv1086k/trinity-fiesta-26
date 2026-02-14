@@ -71,7 +71,7 @@ export default function TextRevealVideo() {
           className="w-[80%] h-[80%] object-cover rounded-2xl"
         >
           <source
-            src="https://res.cloudinary.com/deuzzyw0k/video/upload/f_auto,q_auto,w_1280/v1770916171/event_japte9.mp4"
+            src="https://res.cloudinary.com/deuzzyw0k/video/upload/v1771010486/event_-_Made_with_Clipchamp_1_1_ahfmcs.mp4"
             type="video/mp4"
           />
         </video>

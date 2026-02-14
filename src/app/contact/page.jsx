@@ -68,8 +68,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91 70116 89397",
-      link: "tel:+917011689397",
+      details: "+91 8006004620",
+      link: "tel:+91 8006004620",
     },
     {
       icon: MapPin,
@@ -144,7 +144,7 @@ export default function ContactPage() {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/assets/bg.png"
+          src="/assets/bg.webp"
           alt="Background"
           fill
           className="object-cover opacity-30"

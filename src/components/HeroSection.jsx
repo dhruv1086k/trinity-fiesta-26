@@ -24,7 +24,7 @@ export default function HeroSection() {
 
   if (!mounted) {
     return (
-      <div className="w-full h-screen bg-[url('/assets/bookeh5.png')] bg-center bg-cover relative overflow-hidden">
+      <div className="w-full h-screen bg-[url('/assets/bookeh5.webp')] bg-center bg-cover relative overflow-hidden">
         <div className="w-full h-screen flex items-center justify-center">
           <div className="text-amber-500 text-2xl">Loading...</div>
         </div>
@@ -34,7 +34,7 @@ export default function HeroSection() {
 
   return (
     <div
-      className="w-full h-screen relative overflow-hidden"
+      className="w-full min-h-screen relative overflow-x-hidden pt-16"
       style={{ fontFamily: "var(--font-poppins)" }}
     >
       {/* Dark Overlay */}
@@ -180,110 +180,114 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-72 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none z-10" />
 
       {/* Content */}
-      <div className="w-full h-screen flex items-center justify-center flex-col relative z-10 px-4">
+      <div
+        className="w-full min-h-[calc(100vh-80px)]
+ flex flex-col justify-between relative z-10 px-4 py-10"
+      >
         {/* Glassmorphism Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative bg-[url('/assets/bg.png')] bg-center bg-cover rounded-3xl px-8 md:px-48 py-20 md:py-26 shadow-2xl mt-4 md:mt-0"
-        >
-          {/* Black center glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_70%)] blur-3xl pointer-events-none z-0" />
+        <div className="flex-1 flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative bg-[url('/assets/bg.webp')] bg-center bg-cover rounded-3xl px-8 md:px-48 py-20 md:py-26 shadow-2xl mt-4 md:mt-0"
+          >
+            {/* Black center glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6),rgba(0,0,0,0.35),transparent_70%)] blur-3xl pointer-events-none z-0" />
 
-          {/* Mandala Border Design */}
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            src="/assets/mandala.png"
-            alt="Mandala Border"
-            className="absolute top-0 left-0 w-24 md:w-48 opacity-80"
-          />
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            src="/assets/mandala.png"
-            alt="Mandala Border"
-            className="absolute top-0 right-0 w-24 md:w-48 opacity-80 rotate-90"
-          />
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            src="/assets/mandala.png"
-            alt="Mandala Border"
-            className="absolute bottom-0 left-0 w-24 md:w-48 opacity-80 -rotate-90"
-          />
-          <motion.img
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            src="/assets/mandala.png"
-            alt="Mandala Border"
-            className="absolute bottom-0 right-0 w-24 md:w-48 opacity-80 rotate-180"
-          />
+            {/* Mandala Border Design */}
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 0.8, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              src="/assets/mandala.webp"
+              alt="Mandala Border"
+              className="absolute top-0 left-0 w-24 md:w-48 opacity-80"
+            />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 0.8, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              src="/assets/mandala.webp"
+              alt="Mandala Border"
+              className="absolute top-0 right-0 w-24 md:w-48 opacity-80 rotate-90"
+            />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 0.8, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              src="/assets/mandala.webp"
+              alt="Mandala Border"
+              className="absolute bottom-0 left-0 w-24 md:w-48 opacity-80 -rotate-90"
+            />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 0.8, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              src="/assets/mandala.webp"
+              alt="Mandala Border"
+              className="absolute bottom-0 right-0 w-24 md:w-48 opacity-80 rotate-180"
+            />
 
-          {/* Subtle glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-purple-500/5 rounded-3xl" />
+            {/* Subtle glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-purple-500/5 rounded-3xl" />
 
-          <div className="relative z-10 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-[clamp(2.5rem,5vw,7rem)] font-bold text-amber-500 leading-tight"
-              style={{
-                textShadow: "0 0 30px rgba(245, 158, 11, 0.3)",
-                fontFamily: "var(--font-ethno)",
-              }}
-            >
-              Trinity Fiesta
-            </motion.h1>
+            <div className="relative z-10 text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-[clamp(2.5rem,5vw,7rem)] font-bold text-amber-500 leading-tight"
+                style={{
+                  textShadow: "0 0 30px rgba(245, 158, 11, 0.3)",
+                  fontFamily: "var(--font-ethno)",
+                }}
+              >
+                Trinity Fiesta
+              </motion.h1>
 
-            <motion.h4
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-2xl md:text-3xl my-6 text-amber-100 font-medium"
-            >
-              Annual Fest of Trinity Dwarka
-            </motion.h4>
+              <motion.h4
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="text-2xl md:text-3xl my-6 text-amber-100 font-medium"
+              >
+                Annual Fest of Trinity Dwarka
+              </motion.h4>
 
-            <motion.h5
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="text-xl md:text-2xl font-medium text-amber-200/90"
-            >
-              Insanely Crafted For You
-            </motion.h5>
+              <motion.h5
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="text-xl md:text-2xl font-medium text-amber-200/90"
+              >
+                Insanely Crafted For You
+              </motion.h5>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="flex flex-col sm:flex-row gap-6 mt-12 justify-center"
-            >
-              <a href="https://linktr.ee/trinityfiesta" target="_blank">
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 25px rgba(245, 158, 11, 0.5)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all cursor-pointer"
-                >
-                  Register Now
-                </motion.button>
-              </a>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.1 }}
+                className="flex flex-col sm:flex-row gap-6 mt-12 justify-center"
+              >
+                <a href="https://linktr.ee/trinityfiesta" target="_blank">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 0 25px rgba(245, 158, 11, 0.5)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-amber-400 to-amber-500 text-black font-semibold px-4 py-2 md:px-10 md:py-4 rounded-full shadow-lg hover:shadow-amber-500/50 transition-all cursor-pointer"
+                  >
+                    Register Now
+                  </motion.button>
+                </a>
 
-              <a href="/pass">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="
+                <a href="/pass">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="
       backdrop-blur-md
       bg-white/10
       border border-amber-300
@@ -297,27 +301,28 @@ export default function HeroSection() {
       transition-all duration-300
       cursor-pointer
     "
-                >
-                  Buy Pass
-                </motion.button>
-              </a>
-            </motion.div>
-          </div>
-        </motion.div>
+                  >
+                    Buy Pass
+                  </motion.button>
+                </a>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Bottom Section Icons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="absolute bottom-0 sm:bottom-4 left-0 right-0 flex justify-around items-center px-8 max-w-5xl mx-auto"
+          className="w-full flex justify-around items-center px-8 max-w-5xl mx-auto mt-16"
         >
           <div className="text-center cursor-pointer group">
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
             >
-              <img src="/assets/eventIcon.png" alt="" />
+              <img src="/assets/eventIcon.webp" alt="" />
             </motion.div>
             <p className="text-amber-400 text-xs md:text-sm">Events</p>
           </div>
@@ -327,7 +332,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
             >
-              <img src="/assets/venueIcon.png" alt="" />
+              <img src="/assets/venueIcon.webp" alt="" />
             </motion.div>
             <p className="text-amber-400 text-xs md:text-sm">Tips, Dwarka</p>
           </div>
@@ -337,7 +342,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="w-8 h-8 md:h-12 md:w-12 mx-auto mb-2 flex items-center justify-center"
             >
-              <img src="/assets/scheduleIcon.png" alt="" />
+              <img src="/assets/scheduleIcon.webp" alt="" />
             </motion.div>
             <p className="text-amber-400 text-xs md:text-sm">
               26<sup>th</sup> & 27<sup>th</sup> February

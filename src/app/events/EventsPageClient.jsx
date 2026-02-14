@@ -5,9 +5,6 @@ import Image from "next/image";
 import { MapPin, ExternalLink } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-// Default rulebook URL - will be used if event doesn't have specific rulebook
-const DEFAULT_RULEBOOK = "/assets/rulebook/rulebook.pdf";
-
 const eventsData = {
   1: [
     // =========================
@@ -21,9 +18,8 @@ const eventsData = {
       time: "10:00 AM – 11:00 AM",
       description:
         "Opening ceremony marking the official beginning of Trinity Fiesta 2026.",
-      image: "/events/inaugral.jpg",
-      rulebookUrl:
-        "https://console.cloudinary.com/app/c-885d265e2e32d0d5c313909fc7cdeb/assets/media_library/search/asset/dbba030a1569d6e81ac61d705735977f/manage/summary?q=&view_mode=mosaic&context=manage", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771009215/481037849_18447462175076169_6204287915062577621_n.jpg_stp_dst-jpg_e35_tt6__nc_cat_110_ig_cache_key_MzU3NDg0ODg3Mzg2MTg5NjgwMA.3-ccb7-5_ccb_7-5__nc_sid_58cdad_efg_eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4OTU5LnNkci5DMy_p3xr8k.jpg",
       side: "left",
     },
     {
@@ -33,8 +29,10 @@ const eventsData = {
       time: "11:00 AM – 4:00 PM",
       description:
         "Creative photography competition showcasing powerful visual storytelling.",
-      image: "/events/pixclusive.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/pixclusive_wfcrps.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036451/pixclusive_xercsj.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -45,8 +43,10 @@ const eventsData = {
       time: "11:00 AM – 12:30 PM",
       description:
         "Solo dance competition celebrating expression, rhythm and technique.",
-      image: "/events/nritya.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/nrityanivedan_skl5l6.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/nrityaNivedan_ugznqh.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -57,8 +57,10 @@ const eventsData = {
       time: "11:00 AM",
       description:
         "60-second reel making competition capturing moments creatively.",
-      image: "/events/60sec.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/60SecSaga_znaa70.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -80,8 +82,10 @@ const eventsData = {
       time: "11:00 AM – 12:30 PM",
       description:
         "Short film competition focused on storytelling and cinematic execution.",
-      image: "/events/uncut.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010741/uncutstories_ptazb0.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036452/uncutStories_tg7yoc.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -91,8 +95,10 @@ const eventsData = {
       venue: "Lab-605",
       time: "11:00 AM – 12:30 PM",
       description: "UI/UX design challenge to creatively redesign a 404 page.",
-      image: "/events/404.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/the404makeover_dmpblq.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036452/404Makeover_etvav6.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -103,8 +109,10 @@ const eventsData = {
       time: "11:00 AM – 2:00 PM",
       description:
         "Business plan competition promoting innovative legal startup ideas.",
-      image: "/events/legal.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/legalstartupandbusinessplan_ozfxij.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036450/legalStartUp_wh3u0o.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -115,23 +123,12 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Cyber investigation challenge solving simulated digital crime cases.",
-      image: "/events/shadow.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/shadowtrace_lu4mvw.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/shadowTrace_eabrqp.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
-
-    {
-      id: 10,
-      name: "BGMI",
-      venue: "Room 406",
-      time: "11:00 AM",
-      description:
-        "Competitive mobile esports battle testing strategy and survival skills.",
-      image: "/events/bgmi.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
-    },
-
     {
       id: 11,
       name: "Sing Star Arena",
@@ -139,9 +136,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Solo singing competition showcasing vocal talent and stage presence.",
-      image: "/events/singstar.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "left",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/singstararena_fkvdvj.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/singStarArena_o5pimu.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
     },
 
     {
@@ -151,9 +150,11 @@ const eventsData = {
       time: "11:00 AM",
       description:
         "Team-based esports tournament focused on precision and coordination.",
-      image: "/events/valorant.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/valorant_scgmrt.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036451/valorant_ucjp2c.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "left",
     },
 
     {
@@ -163,9 +164,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Innovation challenge to design, prototype and present creative solutions.",
-      image: "/events/innovator.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "left",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/innovatorsprint_mjvojp.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/innovatorPrint_zezkoy.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
     },
 
     {
@@ -175,9 +178,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Quiz competition testing knowledge across entertainment genres.",
-      image: "/events/jeopardy.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/genrejeopardy_ylxspj.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/genreGeopardy_oxgnbh.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "left",
     },
 
     {
@@ -187,9 +192,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Case mapping competition solving real-world business challenges.",
-      image: "/events/futureframes.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "left",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010740/futureframes_xzhhlw.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/futureFrames_z4th5d.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
     },
 
     {
@@ -199,9 +206,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Literary performance blending poetry, expression and voice.",
-      image: "/events/sahitya.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010717/sahityasangam_aexqhe.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/sahityaSangam_nuuvsz.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "left",
     },
 
     {
@@ -211,9 +220,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Creative culinary challenge preparing innovative dishes without fire.",
-      image: "/events/fireless.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "left",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/firelessfusion_rl92te.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/firelessFusion_hgnmpg.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
     },
 
     {
@@ -223,9 +234,11 @@ const eventsData = {
       time: "11:00 AM – 1:00 PM",
       description:
         "Collage art competition expressing themes through mixed materials.",
-      image: "/events/mixmatch.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/mixnmatchart_veivbl.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/mixNMatch_m7cftf.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "left",
     },
 
     {
@@ -235,9 +248,11 @@ const eventsData = {
       time: "12:30 PM – 1:30 PM",
       description:
         "Radio jockey style competition testing spontaneity and communication.",
-      image: "/events/onair.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "left",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/onairchallenge_uzmpi9.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/onAirChallenge_en1x6p.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
     },
 
     {
@@ -247,9 +262,11 @@ const eventsData = {
       time: "12:30 PM – 2:00 PM",
       description:
         "Creative technical competition blending genres and digital skills.",
-      image: "/events/genreglitch.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
-      side: "right",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/genreglitch_yc9xii.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036448/genreGlitch_adljhi.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "left",
     },
 
     {
@@ -259,11 +276,25 @@ const eventsData = {
       time: "12:30 PM – 2:30 PM",
       description:
         "Academic presentation competition showcasing research and ideas.",
-      image: "/events/scholar.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/scholarsstage_s99nkl.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/scholarStage_a3kjp2.pdf", // Add specific Cloudinary URL here or leave empty for default
+      side: "right",
+    },
+    {
+      id: 10,
+      name: "BGMI",
+      venue: "Room 406",
+      time: "1:00 - 3:00 PM",
+      description:
+        "Competitive mobile esports battle testing strategy and survival skills.",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/bgmiegame_drmv7m.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036447/bgmi_ts6cn3.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
-
     {
       id: 22,
       name: "Brainwave Pitch",
@@ -271,8 +302,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Entrepreneurial pitch competition presenting innovative ideas.",
-      image: "/events/brainwave.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/brainwavepitch_pxev09.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/brainWavePitch_ql4shp.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -283,8 +316,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Coding competition testing logic, speed and technical skills.",
-      image: "/events/codex.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/codexbuild_g2g3ud.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/codexBuild_mjj4ef.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -295,8 +330,10 @@ const eventsData = {
       time: "1:00 PM – 3:30 PM",
       description:
         "Marketing strategy competition focused on branding innovation.",
-      image: "/events/brandbot.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010673/barndbot_affqa6.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/brandBot_o4kxjs.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -307,8 +344,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Mime performance competition expressing stories without words.",
-      image: "/events/mime.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010675/mimemagic_usishw.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/mimeMagic_vqqmpc.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -319,8 +358,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Strategic auction-based competition testing financial decision making.",
-      image: "/events/profitplay.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/profitplayauction_tv6ace.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/profitPlayAuction_l4ho80.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -331,8 +372,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Intellectual competition challenging analytical and logical skills.",
-      image: "/events/battlebrains.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/battleofbrains_ppejw8.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/battleOfBrains_mnbpro.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -342,8 +385,10 @@ const eventsData = {
       venue: "Room 104",
       time: "1:00 PM – 3:00 PM",
       description: "Public speaking contest testing persuasion and confidence.",
-      image: "/events/talk.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010677/talkknockout_q6ch1p.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036446/talkKnockout_higs9u.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -354,8 +399,10 @@ const eventsData = {
       time: "1:00 PM – 3:00 PM",
       description:
         "Digital creativity competition focused on short-form content.",
-      image: "/events/cybertok.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010678/cybertok_l1ddfi.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/cyberTok_ixlrx4.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -365,8 +412,10 @@ const eventsData = {
       venue: "Stage",
       time: "1:30 PM – 2:30 PM",
       description: "Dramatic performance competition showcasing acting talent.",
-      image: "/events/scene.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/scenestealers_omilzq.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036445/sceneStealers_konbso.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -377,8 +426,10 @@ const eventsData = {
       time: "2:00 PM – 4:00 PM",
       description:
         "Legal drafting competition focusing on practical documentation skills.",
-      image: "/events/agreement.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010672/agreementdraftingandpresentationcompetition_mlhnzu.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/agreementDrafting_mrwf92.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -389,8 +440,10 @@ const eventsData = {
       time: "2:00 PM – 4:00 PM",
       description:
         "High-energy competitive challenge testing resilience and teamwork.",
-      image: "/events/firebound.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010679/firebound_zm8rsy.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/fireBound_gg67u6.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -400,8 +453,10 @@ const eventsData = {
       venue: "Stage",
       time: "2:30 PM – 4:00 PM",
       description: "Musical performance event celebrating raw vocal talent.",
-      image: "/events/voice.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010715/voiceunplegged_ifelad.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/voiceUnplugged_lwwglx.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -411,7 +466,8 @@ const eventsData = {
       venue: "Stage",
       time: "4:00 PM – 5:00 PM",
       description: "Award ceremony honoring winners and participants.",
-      image: "/events/prize.jpg",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771037591/360_F_1807663292_FfzBf70fyP4nnTx5wznRbyiLeNymLkes_nbvxph.jpg",
       rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
@@ -429,8 +485,10 @@ const eventsData = {
       time: "10:00 AM",
       description:
         "Dance performances showcasing vibrant cultural expressions.",
-      image: "/events/rangnritya.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010716/rangnritya_kpv1c5.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036444/rangNritya_qsl9mj.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -440,8 +498,10 @@ const eventsData = {
       venue: "Dilli Haat",
       time: "11:00 AM",
       description: "60-second reel competition capturing festival highlights.",
-      image: "/events/60sec.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/60secsaga_lxsyiu.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/60SecSaga_znaa70.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -459,13 +519,15 @@ const eventsData = {
 
     {
       id: 38,
-      name: "Floor Art Fiesta",
+      name: "Floor Art Fiesta - Rangoli",
       venue: "Near Stalls",
       time: "11:00 AM",
       description:
         "Creative floor art competition celebrating artistic imagination.",
-      image: "/events/floorart.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010738/floorartfiestarangoli_pofdoi.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/floorArtFiesta_arqwcg.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -476,8 +538,10 @@ const eventsData = {
       time: "11:00 AM",
       description:
         "Clay art competition highlighting traditional craftsmanship.",
-      image: "/events/miti.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010711/mitikalakriticlaymodelling_mmiflf.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036443/mitiKalakriti_heknjp.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -487,8 +551,10 @@ const eventsData = {
       venue: "Stage",
       time: "1:00 PM",
       description: "Fashion showcase celebrating creativity and confidence.",
-      image: "/events/style.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010676/styleparade_ppo7jc.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036442/styleParadise_nirijr.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -499,8 +565,10 @@ const eventsData = {
       time: "3:00 PM",
       description:
         "Interactive art-based activity spreading colors and creativity.",
-      image: "/events/color.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010739/colormeupfacepainting_berbje.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036449/colorMeUp_rccmop.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
 
@@ -510,8 +578,10 @@ const eventsData = {
       venue: "Stage",
       time: "3:00 PM",
       description: "Live band performances delivering electrifying music.",
-      image: "/events/band.jpg",
-      rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771010671/banddominion_jvfqm3.png",
+      rulebookUrl:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771036441/bandDominion_snckxd.pdf", // Add specific Cloudinary URL here or leave empty for default
       side: "right",
     },
 
@@ -521,7 +591,8 @@ const eventsData = {
       venue: "Dilli Haat",
       time: "5:00 PM",
       description: "Closing ceremony celebrating winners and participants.",
-      image: "/events/prize.jpg",
+      image:
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771037591/360_F_1807663292_FfzBf70fyP4nnTx5wznRbyiLeNymLkes_nbvxph.jpg",
       rulebookUrl: "", // Add specific Cloudinary URL here or leave empty for default
       side: "left",
     },
@@ -556,7 +627,7 @@ const EventsPage = () => {
 
   return (
     <div
-      className="min-h-screen bg-[url('/assets/bookeh5.png')] bg-no-repeat bg-cover bg-center text-white relative"
+      className="min-h-screen bg-[url('/assets/bookeh5.webp')] bg-no-repeat bg-cover bg-center text-white relative"
       style={{
         backgroundBlendMode: "darken",
         backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -730,8 +801,8 @@ const EventCard = ({ event, index, side, inView }) => {
   const ref = useRef(null);
   const router = useRouter();
 
-  // Get rulebook URL - use event-specific or fall back to default
-  const rulebookUrl = event.rulebookUrl || DEFAULT_RULEBOOK;
+  // Get rulebook URL
+  const rulebookUrl = event.rulebookUrl;
 
   return (
     <motion.div
@@ -818,18 +889,20 @@ const EventCard = ({ event, index, side, inView }) => {
             </p>
 
             {/* Rulebook View Button */}
-            <motion.a
-              href={rulebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
-            >
-              <ExternalLink className="w-4 h-4" />
-              View Rulebook
-            </motion.a>
+            {rulebookUrl?.trim() ? (
+              <motion.a
+                href={rulebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+              >
+                <ExternalLink className="w-4 h-4" />
+                View Rulebook
+              </motion.a>
+            ) : null}
           </div>
         </motion.div>
       </div>
@@ -884,17 +957,20 @@ const EventCard = ({ event, index, side, inView }) => {
                   </p>
 
                   {/* Rulebook View Button */}
-                  <motion.a
-                    href={rulebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    View Rulebook
-                  </motion.a>
+                  {rulebookUrl?.trim() ? (
+                    <motion.a
+                      href={rulebookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Rulebook
+                    </motion.a>
+                  ) : null}
                 </div>
               </motion.div>
             </div>
@@ -1012,17 +1088,20 @@ const EventCard = ({ event, index, side, inView }) => {
                   </p>
 
                   {/* Rulebook View Button */}
-                  <motion.a
-                    href={rulebookUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    View Rulebook
-                  </motion.a>
+                  {rulebookUrl?.trim() ? (
+                    <motion.a
+                      href={rulebookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center gap-2 bg-linear-to-r from-amber-400 to-amber-500 text-black font-bold px-4 py-2 rounded-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 transition-all w-full"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Rulebook
+                    </motion.a>
+                  ) : null}
                 </div>
               </motion.div>
 
