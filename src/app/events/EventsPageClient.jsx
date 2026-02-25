@@ -579,7 +579,7 @@ const eventsData = {
       image:
         "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771064765/mitikalakriti_zzabb9.png",
       rulebookUrl:
-        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1771069860/Miti_Kala_Kriti_xrcrrj.pdf",
+        "https://res.cloudinary.com/deuzzyw0k/image/upload/v1772012583/miti_1_lnt9qa.pdf",
       registernow:
         "https://docs.google.com/forms/d/1ZPqquC9uaXw-zgW0R8YWP2Z0R6E9EWJ2JwOx9uwqX_o",
       side: "left",
